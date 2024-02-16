@@ -1,0 +1,37 @@
+.terms {
+    margin-bottom: 120px;
+
+    &__title {
+        @extend %rubik-500;
+        font-size: 24px;
+        color: #243f4d;
+        margin-bottom: 35px;
+    }
+
+    &__title-info {
+        @extend %rubik-500;
+        font-size: 24px;
+        color: #243f4d;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: left;
+        @extend %rubik-400;
+        color: #243f4d;
+        margin-bottom: 35px;
+        line-height: 1.5;
+
+        span {
+            margin-right: 14px;
+        }
+    }
+
+    &__info {
+        @extend %rubik-400;
+        color: #243f4d;
+        margin-bottom: 73px;
+        line-height: 1.5;
+    }
+}

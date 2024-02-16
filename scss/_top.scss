@@ -1,0 +1,21 @@
+.top {
+    background-color: #edf1f4;
+    margin-bottom: 120px;
+
+    &-container {
+        max-width: 1700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 35px 0 35px;
+    }
+
+    &__title {
+        margin-bottom: 11px;
+    }
+}
+
+@media(max-width: 768px){
+    .top{
+        margin-bottom: 60px;
+    }
+}

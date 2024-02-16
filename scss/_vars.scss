@@ -1,0 +1,42 @@
+$accent: #a3bbc8;
+$default: #fcd7b6;
+$title: #436372;
+$user: #a3bbc8;
+$search: #edf1f4;
+$line: #fde7d3;
+$footer: #7b7b7b;
+%dmsans-700{
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%dmsans-400{
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%rubik-500{
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%rubik-400{
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%btn{
+    background-color: $accent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-left: -4px;
+}
+
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}

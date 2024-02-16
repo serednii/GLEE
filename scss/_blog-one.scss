@@ -1,0 +1,170 @@
+.blog-one {
+    &__text {
+        h2 {
+            @extend %rubik-400;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            @extend %rubik-500;
+            font-size: 16px;
+            color: #243f4d;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            @extend %rubik-500;
+            font-size: 18px;
+            padding-top: 28px;
+            margin-bottom: 26px;
+        }
+
+        p {
+            @extend %rubik-400;
+            margin-bottom: 33px;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        blockquote {
+            @extend %rubik-400;
+            font-size: 16px;
+            color: #243f4d;
+            background-color: #edf1f4;
+            padding: 20px 30px;
+            margin-bottom: 45px;
+            border-left: 6px solid $accent;
+
+            p {
+                position: relative;
+                margin: 20px 0 0;
+                margin-left: 40px;
+            }
+
+            p::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background-color: $accent;
+                top: 10px;
+                left: -40px;
+            }
+        }
+    }
+
+    &__left-img {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__right-img {
+        float: right;
+        margin-left: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__author {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #ebebeb;
+        border-top: 2px solid #ebebeb;
+        padding: 25px 0;
+        margin-bottom: 60px;
+    }
+
+    &__creator {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__creator-img {
+        width: 76px;
+        height: 76px;
+        object-fit: cover;
+        margin-right: 26px;
+    }
+
+    &__creator-name {
+        @extend %rubik-500;
+        font-size: 18px;
+        color: #333;
+        margin: 15px 0 10px;
+    }
+
+    &__creator-text {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: #666;
+    }
+
+    &__tags,
+    &__share {
+        span {
+            @extend %rubik-400;
+            font-size: 16px;
+            color: #333;
+            margin-right: 25px;
+        }
+    }
+
+    &__tags {
+        margin: 10px 0 15px;
+
+        a {
+            @extend %rubik-400;
+            font-size: 16px;
+            color: #999;
+
+            &:focus {
+                border-color: #f9fafb;
+                box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+                outline: 0;
+            }
+        }
+    }
+
+    &__share {
+        a {
+            vertical-align: middle;
+            margin-right: 15px;
+
+            &:focus {
+                border-color: #f9fafb;
+                box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+                outline: 0;
+            }
+        }
+    }
+
+    .comments-title {
+        margin-bottom: 50px;
+        color: #436372;
+        font-size: 24px;
+        @extend %rubik-500;
+    }
+}
+
+
+@media(max-width: 620px) {
+    .blog-one {
+        &__author {
+            display: block;
+        }
+
+        &__creator {
+            justify-content: flex-start;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            blockquote {
+                padding: 10px;
+            }
+        }
+    }
+
+}

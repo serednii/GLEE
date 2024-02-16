@@ -1,0 +1,15 @@
+<svg width="5" height="16" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="18" width="7" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="13.403317" x2="0.687503" y1="3.340825" x1="0.687503" stroke-width="1.5" stroke="red" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="1.528327" x2="1.687502" y1="2.903326" x1="1.062503" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="0.278328" x2="3.000001" y1="1.215827" x1="1.875002" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="14.590816" x2="1.437503" y1="13.590817" x1="0.812503" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="15.590815" x2="2.562502" y1="14.528316" x1="1.625002" stroke-width="1.5" stroke="#000" fill="none"/>
+ </g>
+</svg>

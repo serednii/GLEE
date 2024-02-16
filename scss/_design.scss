@@ -1,0 +1,153 @@
+.design {
+    margin-bottom: 120px;
+
+    .title {
+        margin-bottom: 25px;
+    }
+
+    &__top {
+        margin-bottom: 80px;
+    }
+
+    &__filter-btn {
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+    }
+
+    &-btn {
+        border: none;
+        color: #8b8b8b;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:focus {
+            border-color: #f9fafb;
+            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+            outline: 0;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            color: #a3bbc8;
+            border-bottom-color: #a3bbc8;
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 370px);
+        justify-content: center;
+        grid-gap: 30px;
+        margin-bottom: 120px;
+    }
+
+    &__item {
+        @extend %dmsans-700;
+        font-size: 20px;
+        color: #191919;
+        aspect-ratio: 1/0.66;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .mixitup-control-active {
+        color: #000;
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 20px;
+        color: #191919;
+    }
+
+    &__text {
+        padding-left: 46px;
+        padding-top: 33px;
+    }
+
+    &__item-text {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    &__item-type {
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: #a3bbc8;
+    }
+
+    &__video {
+        position: relative;
+    }
+
+    &__video__popup {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 3.9/1;
+    }
+
+    &__video__play {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 127px;
+        height: 127px;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:focus {
+            border-color: #f9fafb;
+            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+            outline: 0;
+            border-radius: 10px;
+        }
+
+        &:hover+.design__video__popup {
+            background-color: #191919;
+        }
+    }
+}
+
+@media(max-width:1950px) {
+
+
+    .design__video__play {
+        width: 6.614vw;
+        height: 6.614vw;
+    }
+
+}
+
+
+@media(max-width: 620px) {
+    .design {
+        margin-bottom: 60px;
+
+        &__content {
+            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fill, 300px);
+        }
+
+        &__text {
+            padding: 0;
+        }
+
+        &__filter-btn {
+            margin-bottom: 36px;
+        }
+
+        &__item {
+            font-size: 16px;
+        }
+    }
+}

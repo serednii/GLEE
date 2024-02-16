@@ -1,0 +1,246 @@
+.blog {
+    margin-bottom: 27px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        align-items: baseline;
+        margin-right: 15px;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    &__top-link {
+        position: relative;
+        margin-right: 20px;
+        height: min-content;
+        padding: 3px;
+
+        &:focus {
+            border-color: #f9fafb;
+            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+            outline: 0;
+            border-radius: 10px;
+        }
+    }
+
+    &__top-link::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/blog/arrow.png");
+        background-repeat: no-repeat;
+        top: 4px;
+        left: 79px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 370px);
+        column-gap: 30px;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        background-color: #fff;
+        min-height: 415px;
+    }
+
+    &__item-img {
+        position: relative;
+        display: block;
+        max-width: 370px;
+        aspect-ratio: 1/0.68;
+        background-color: aqua;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:focus {
+            border-color: #1a1e21;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+        }
+    }
+
+    &__item-btn {
+        position: absolute;
+        border: none;
+        background-color: $accent;
+        padding: 8px 37px;
+        color: #fff;
+        border-radius: 20px;
+        bottom: -17px;
+        left: 30px;
+        cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
+
+        &:hover {
+            background-color: #fff;
+            color: $accent;
+        }
+
+        &:focus {
+            border-color: #1a1e21;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+        }
+
+    }
+
+    &__item-box {
+        padding: 30px 35px 0;
+    }
+
+    &__item-title {
+        position: relative;
+        display: block;
+        max-width: 300px;
+        min-height: 82px;
+        @extend %dmsans-700;
+        font-size: 18px;
+        padding-bottom: 11px;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:focus {
+            border-color: #1a1e21;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+        }
+    }
+
+    &__partners {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__fon {
+        position: static;
+        height: 436px;
+        background-color: #fef7f0;
+        margin-top: -345px;
+    }
+
+}
+
+.blog__box {
+    display: flex;
+    gap: 30px;
+    @extend %rubik-400;
+    font-size: 12px;
+    padding-top: 20px;
+
+    &-author,
+    &-data {
+        position: relative;
+        color: #222933;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &-author {
+        &:focus {
+            border-color: #1a1e21;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+        }
+    }
+
+    &-author::before {
+        background-image: url("../images/blog/blog_user.svg");
+    }
+
+    &-data::before {
+        background-image: url("../images/blog/blog_clock.svg");
+    }
+
+}
+
+
+@media(max-width: 1200px) {
+    .blog {
+        &__item-box {
+            padding: 20px 15px;
+        }
+    }
+
+}
+
+@media(max-width: 1050px) {
+    .blog {
+        &__box {
+            justify-content: space-between;
+        }
+
+        &__item-title {
+            max-width: 100%;
+            min-height: 75px;
+        }
+
+        &__item-box {
+            min-height: 170px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .blog {
+        &__items {
+            grid-template-columns: repeat(auto-fill, 300px);
+        }
+
+        &__partners {
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+            row-gap: 15px;
+
+        }
+
+        &__partner-img {
+            width: 165px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        &__fon {
+            margin-top: -407px;
+        }
+    }
+
+
+
+
+    .blog__top {
+        h3 {
+            font-size: 24px;
+        }
+
+        &-link {
+            padding-right: 0;
+        }
+
+        &-link::after {
+            position: static;
+        }
+    }
+}
