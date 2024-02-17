@@ -175,3 +175,47 @@
         color: #333;
     }
 }
+
+@media(max-width: 1230px) {
+    .shop {
+
+
+        &__filters {
+            width: 100%;
+            margin-right: 0;
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 0 20px;
+            z-index: 100;
+            background: #fff;
+        }
+
+        &__filter-btn {
+            display: block;
+            border: none;
+            background-color: $accent;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            right: 0;
+            z-index: 101;
+            bottom: 50px;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 12px;
+                left: 11px;
+            }
+        }
+    }
+
+    .filter-recent {
+        display: none;
+    }
+}

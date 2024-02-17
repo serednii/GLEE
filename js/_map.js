@@ -27,3 +27,4 @@ function init() {
   map.geoObjects.add(placemark);
 
 }
+  

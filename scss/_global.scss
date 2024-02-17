@@ -1,21 +1,18 @@
 .hidden {
   visibility: hidden;
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.display-parametr {
+  position: fixed;
+  min-width: 50px;
+  height: 1.5rem;
+  padding: 0 10px;
+  line-height: 1.5rem;
+  background-color: black;
+  color: white;
+  top:50px;
+  left: 50%;
+  z-index: 1000;
 }
-
 
 body {
   font-size: 15px;

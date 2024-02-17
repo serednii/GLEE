@@ -16,15 +16,13 @@ $(function () {
 
   $('.shop__filter-btn').on('click', function () {
     $('.shop__filters').slideToggle();
-    $(this).attr('aria-label', function (_, attr) {
-      return attr === 'Open filter' ? 'Close filter' : 'Open filter';
-    });
   });
   //--------------------------------------------------------
 
 
 
   //--------------------------------------------------------
+
   function mediaQuery(x) {
     if (x.matches) { // If media query matches
       $('.footer-top__list, .footer-top__text').attr("style", "display:none");
@@ -45,6 +43,8 @@ $(function () {
       $('.footer-top__list, .footer-top__text').attr("style", "display:block");
       $('.footer-top__title').removeAttr('aria-label');
       $('.footer-top__title').off('click');//Видаляємо оброботчик подій
+
+
     }
   }
 
@@ -58,6 +58,7 @@ $(function () {
   x.addEventListener("change", function () {
     console.log(x)
     console.log('x')
+
     mediaQuery(x);
   });
   //--------------------------------------------------------

@@ -51,8 +51,7 @@
     }
 
     &__img {
-        width: 340px;
-        height: 295px;
+        max-width: 340px;
     }
 
     &__box {
@@ -101,6 +100,7 @@
 
 @media(max-width: 768px){
     .ourteam{ 
+        margin-bottom: 50px;
         &__items{
             grid-template-columns: repeat(1, 1fr);
             justify-items: center;

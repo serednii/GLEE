@@ -197,7 +197,7 @@
 
 
 
-@media(max-width: 600px) {
+@media(max-width: 620px) {
     .footer {
         .footer-top {
             grid-template-columns: 100%;
@@ -232,14 +232,14 @@
                 margin-left: 0;
             }
 
-            .footer-buttom {
-                justify-content: center;
+            // .footer-buttom {
+            //     justify-content: center;
     
-                &__copy {
-                    text-align: center;
-                    width: 100%;
-                }
-            }
+            //     &__copy {
+            //         text-align: center;
+            //         width: 100%;
+            //     }
+            // }
         }
 
         .footer-buttom {
