@@ -174,8 +174,8 @@ $(function () {
 
   // var mixer1 = mixitup(containerEl1, config);
   // var mixer2 = mixitup(containerEl2, config);
-  console.log(containerEl1)
-  console.log(containerEl2)
+  // console.log(containerEl1)
+  // console.log(containerEl2)
 
   containerEl1 && mixitup(containerEl1, config);
   containerEl2 && mixitup(containerEl2, config);
