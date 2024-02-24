@@ -6,7 +6,6 @@ $(function () {
   }
 
   screenParameter()
-
   window.addEventListener('resize', (e) => {
     screenParameter()
   });

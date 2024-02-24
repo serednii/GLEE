@@ -33,12 +33,6 @@
         width: 100%;
         cursor: pointer;
         margin-bottom: 30px;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     &__help {
@@ -50,12 +44,6 @@
 
     &__error {
         height: min-content;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     a {
@@ -66,12 +54,6 @@
         display: block;
         text-align: center;
         margin-bottom: 25px;
-
-        &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
-        }
     }
 
     &__btn-create {
@@ -84,11 +66,15 @@
         border: 2px solid $accent;
         width: 100%;
         cursor: pointer;
+    }
 
+    &__btn,
+    &__error,
+    &__not-registered,
+    &__btn-create {
         &:focus {
-            border-color: #1a1e21;
-            outline: 0;
-            box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+            @include black-focus;
+
         }
     }
 }

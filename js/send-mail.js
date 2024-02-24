@@ -1,4 +1,4 @@
-const mailPath = 'http://nastya03.zzz.com.ua/send-mail.php';
+const mailPath = 'http://glee.smm.zzz.com.ua/send-mail.php';
 
 function formDataToObject(formData) {
   let jsonObject = {};
@@ -8,6 +8,14 @@ function formDataToObject(formData) {
   return jsonObject;
 }
 
+function clearForm(formElement) {
+  formElement.target.querySelectorAll('input:not([type="hidden"]) ,textarea').forEach(e => {
+    e.checked = e.defaultChecked;
+    e.value = "";
+  })
+}
+
+
 document.querySelectorAll('.send-form-mail').forEach((el) => {
 
   el.addEventListener('submit', function (e) {
@@ -15,11 +23,11 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
 
-    if(!validateEmail(data.email)){
+    if (!validateEmail(data.email)) {
       alert('Email no valid')
       return;
     }
-    
+
     // console.log(data)
 
     fetch(mailPath, {

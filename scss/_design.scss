@@ -24,10 +24,8 @@
         transition: all 0.3s;
 
         &:focus {
-            border-color: #f9fafb;
-            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-            outline: 0;
             border-radius: 10px;
+            @include white-focus;
         }
 
         &:hover {
@@ -107,10 +105,8 @@
         }
 
         &:focus {
-            border-color: #f9fafb;
-            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-            outline: 0;
             border-radius: 10px;
+            @include white-focus;
         }
 
         &:hover+.design__video__popup {
@@ -120,8 +116,6 @@
 }
 
 @media(max-width:1950px) {
-
-
     .design__video__play {
         width: 6.614vw;
         height: 6.614vw;
@@ -134,6 +128,10 @@
     .design {
         margin-bottom: 60px;
 
+        &__top {
+            margin-bottom: 40px;
+        }
+
         &__content {
             margin-bottom: 60px;
             grid-template-columns: repeat(auto-fill, 300px);
@@ -141,10 +139,6 @@
 
         &__text {
             padding: 0;
-        }
-
-        &__filter-btn {
-            margin-bottom: 36px;
         }
 
         &__item {

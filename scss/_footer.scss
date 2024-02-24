@@ -33,16 +33,18 @@
                 max-width: 270px;
             }
         }
-    
+
         &__address,
         &__phone,
         &__email {
             margin-bottom: 25px;
             display: block;
+
             &::before {
                 text-transform: uppercase;
                 content: "address:";
             }
+
             &:focus {
                 background-color: #f9fafb;
                 border-color: #f9fafb;
@@ -81,10 +83,12 @@
             border-bottom: 1px solid transparent;
 
             transition: border-bottom-color .3s;
-            &:hover{
+
+            &:hover {
                 // text-decoration-line: underline;
                 border-bottom-color: inherit;
             }
+
             &:focus {
                 background-color: #f9fafb;
                 border-color: #f9fafb;
@@ -121,9 +125,7 @@
             padding: 12px 14px;
 
             &:focus {
-                border-color: #f9fafb;
-                box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-                outline: 0;
+                @include white-focus;
             }
         }
     }
@@ -149,6 +151,16 @@
             }
         }
 
+        &__page-list:not(:last-child) {
+            position: relative;
+
+            &::after {
+                content: '|';
+                position: absolute;
+                padding-left: 10px;
+            }
+        }
+
         &__page-link {
             color: $footer;
             padding: 3px;
@@ -167,10 +179,10 @@
 // @media(max-width: 1050px) {
 //     .footer {
 //         .footer-top {
-       
+
 //             &__item {
 //                 // text-align: center;
-                
+
 //                 // margin-top: 15px;
 //                 // max-width: 300px;
 //             }
@@ -186,9 +198,9 @@
 @media(max-width: 900px) {
     .footer {
         .footer-top {
-        grid-template-columns: repeat(2, 300px);
-           
-    
+            grid-template-columns: repeat(2, 300px);
+
+
         }
 
 
@@ -234,7 +246,7 @@
 
             // .footer-buttom {
             //     justify-content: center;
-    
+
             //     &__copy {
             //         text-align: center;
             //         width: 100%;
@@ -244,12 +256,12 @@
 
         .footer-buttom {
             justify-content: center;
-    
+
             &__copy {
                 text-align: center;
                 width: 100%;
             }
-    
+
             &__accept-img {
                 margin-left: 15px;
             }
@@ -257,4 +269,3 @@
         }
     }
 }
-

@@ -69,6 +69,11 @@
 
         &-link {
             position: relative;
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
 
         .user-nav__link-img {
@@ -90,12 +95,15 @@
         position: relative;
         transition: all 0.3s;
 
-        &:hover {}
-
-        &:focus {
+        &:hover {
             border-color: #f9fafb;
             box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
             outline: 0;
+            border-radius: 50%;
+        }
+
+        &:focus {
+            @include white-focus;
             border-radius: 50%;
         }
     }
@@ -160,6 +168,7 @@
             transition: all .3s;
             background-color: #fff;
             padding: 20px;
+
             &.menu--active {
                 transform: translateY(0%);
                 transition: all .3s;
@@ -198,6 +207,7 @@
 @media(max-width: 610px) {
     .header {
         padding: 10px 0;
+        margin-bottom: 0;
 
         &__inner {
             display: grid;

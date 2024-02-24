@@ -12,7 +12,7 @@
         display: flex;
         justify-content: flex-end;
         max-width: 870px;
-        height: 390px;
+        min-height: 390px;
         width: 100%;
         background-color: #feefe2;
 
@@ -42,6 +42,7 @@
             color: #243f4d;
             font-size: 16px;
             margin-bottom: 36px;
+            word-break: break-all;
         }
 
         &__link {
@@ -65,10 +66,8 @@
             }
 
             &:focus {
-                border-color: #1a1e21;
-                outline: 0;
                 border-radius: 10px;
-                box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+                @include black-focus;
             }
         }
 
@@ -119,7 +118,7 @@
 @media(max-width: 1050px) {
     .blurb {
         &__items {
-            display: block;
+            flex-wrap: wrap;
         }
 
         &__item {
@@ -150,7 +149,6 @@
         }
     }
 }
-
 
 @media(max-width: 620px) {
     .blurb {
@@ -185,7 +183,8 @@
         }
 
         &__item {
-            height: 250px;
+            min-height: 250px;
+            justify-content: flex-start;
         }
 
         &__item__link {

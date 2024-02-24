@@ -2,8 +2,9 @@
 @import "vars";
 @import "fonts";
 @import "libs";
-@import "global";
+@import 'mixin';
 
+@import "global";
 @import "header";
 @import "top";
 @import "burger";
@@ -17,12 +18,12 @@
 @import "statistics";
 @import "ourteam";
 @import "terms";
+@import "info";
 @import "shop";
 @import "filter";
 @import "comments";
 @import "comments-form";
 @import "related";
-
 @import "blog-page";
 @import "recent-posts";
 @import "blog-one";
