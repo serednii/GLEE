@@ -37,6 +37,8 @@
         }
     }
 
+
+
     &__input {
         position: relative;
 
@@ -86,6 +88,8 @@
     }
 }
 
+
+
 @media(max-width: 1230px) {
     .comments-form {
         max-width: 820px;
@@ -106,15 +110,15 @@
 @media(max-width: 860px) {
     .comments-form {
 
-        &__box-input {
-            display: block;
-            margin-bottom: 0;
-        }
+        // &__box-input {
+        //     display: block;
+        //     margin-bottom: 0;
+        // }
 
-        &__text-input {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+        // &__text-input {
+        //     width: 100%;
+        //     margin-bottom: 30px;
+        // }
 
     }
 }

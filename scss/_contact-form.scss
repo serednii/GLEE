@@ -28,6 +28,14 @@
         margin-bottom: 26px;
         display: flex;
         justify-content: space-between;
+
+    }
+
+    .input-captcha,
+    .img-captcha {
+        width: 180px;
+        display: block;
+        margin-bottom: 15px;
     }
 
     &__text-input {

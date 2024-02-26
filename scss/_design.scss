@@ -95,8 +95,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 127px;
-        height: 127px;
+        width: clamp(50px, 10vw, 127px);
+        height: clamp(50px, 10vw, 127px);
         transform: translate(-50%, -50%);
 
         img {
@@ -113,14 +113,6 @@
             background-color: #191919;
         }
     }
-}
-
-@media(max-width:1950px) {
-    .design__video__play {
-        width: 6.614vw;
-        height: 6.614vw;
-    }
-
 }
 
 @media(max-width:1100px) {
