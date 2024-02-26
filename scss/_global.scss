@@ -117,55 +117,12 @@ body {
 
 }
 
-.pagination {
-  grid-area: pagination;
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
-
-  &__list {
-    display: flex;
-    gap: 15px;
-  }
-
-  &__item {
-    border: 1px solid $accent;
-    padding: 18px 20px;
-    transition: background-color .3s;
-    &:hover{
-      background-color: #a3bbc8;
-    }
-    &:focus{
-      outline: 0;
-      background-color: #a3bbc8;
-    }
-  }
-
-  &__item-active {
-    background-color: $accent;
-  }
-
-  &__link {
-    @extend %rubik-400;
-    font-size: 16px;
-    color: #243f4d;
-  }
-
-  &__link-active {
-    color: #fff;
-  }
-
-  &__next {
-    @extend %rubik-400;
-    font-size: 16px;
-    color: #243f4d;
-  }
-}
 
 @media (max-width: 620px) {
   .parent {
     padding-top: 5px;
   }
+
   .title {
     font-size: 33px;
     line-height: 36px;

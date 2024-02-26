@@ -24,6 +24,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         top: -100px;
+        cursor: pointer;
+        transition: border-color 0.3s ease-in-out;
+
+        &:hover {
+            border-color: #a3bbc8;
+        }
     }
 
     .slick-prev.slick-arrow {
@@ -32,7 +38,6 @@
     }
 
     .slick-next.slick-arrow {
-        border: 2px solid #a3bbc8;
         right: 0;
         background-image: url("../images/icons/arrow-right.svg");
     }

@@ -18,6 +18,11 @@
         margin-right: 20px;
         height: min-content;
         padding: 3px;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: #a3bbc8;
+        }
 
         &:focus {
             border-color: #f9fafb;
@@ -40,7 +45,7 @@
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 370px);
+        grid-template-columns: repeat(auto-fill, minmax(250px, 370px));
         column-gap: 30px;
         justify-content: center;
         margin-bottom: 100px;
@@ -150,6 +155,12 @@
     }
 
     &-author {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: #a3bbc8;
+        }
+
         &:focus {
             @include black-focus;
         }
@@ -195,7 +206,6 @@
 @media(max-width: 768px) {
     .blog {
         &__items {
-            grid-template-columns: repeat(auto-fill, 300px);
             margin-bottom: 30px;
         }
 
