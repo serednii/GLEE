@@ -85,6 +85,15 @@
         &:focus {
             @include white-focus;
         }
+
+        transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+        &:hover {
+            color: #a3bbc8;
+            background-color: white;
+        }
+
     }
 }
 

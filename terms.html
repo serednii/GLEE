@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Glee</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#9cb0b3">
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
@@ -14,335 +23,342 @@
 </head>
 
 <body>
-<div class="display-parametr"></div>
-<div class="parent">
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="images/header/icons/logo.svg" alt="logo img">
-        </a>
-        <nav class="menu">
-          <button class="burger menu__btn" data-burger aria-label="open menu">
-            <span class="burger__line"></span>
-          </button>
-          <ul class="menu__list" data-menu>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link  menu__list-link--active" href="index.html">Home +</a>
-            </li>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link" href="about.html">About</a>
-            </li>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link" href="blog.html">Services</a>
-            </li>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link" href="shop_1.html">Pages +</a>
-            </li>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link" href="terms.html">News</a>
-            </li>
-            <li class="menu__list-item" data-menu-item>
-              <a class="menu__list-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="user-nav">
-          <a class="user-nav__link user-nav__link--search" href="#">
-            <img class="user-nav__link-img" src="images/header/icons/search.svg" alt="search icon">
+  <div class="display-parametr"></div>
+  <div class="parent">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="index.html">
+            <img class="logo__img" src="images/header/icons/logo.svg" alt="logo img">
           </a>
-          <div class="user-nav__inner">
-            <a class="user-nav__inner-link">
-              <img class="user-nav__link-img" src="images/header/icons/heart.svg" alt="heart icon">
-              <span class="user-nav__num">0</span>
+          <nav class="menu">
+            <button class="burger menu__btn" data-burger aria-label="open menu">
+              <span class="burger__line"></span>
+            </button>
+            <ul class="menu__list" data-menu>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link  menu__list-link--active" href="index.html">Home +</a>
+              </li>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link" href="about.html">About</a>
+              </li>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link" href="blog.html">Services</a>
+              </li>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link" href="shop_1.html">Pages +</a>
+              </li>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link" href="terms.html">News</a>
+              </li>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a class="user-nav__link user-nav__link--search" href="#">
+              <img class="user-nav__link-img" src="images/header/icons/search.svg" alt="search icon">
             </a>
-            <a class="user-nav__inner-link">
-              <img class="user-nav__link-img" src="images/header/icons/cart.svg" alt="cart icon">
-              <span class="user-nav__num">0</span>
+            <div class="user-nav__inner">
+              <a class="user-nav__inner-link">
+                <img class="user-nav__link-img" src="images/header/icons/heart.svg" alt="heart icon">
+                <span class="user-nav__num">0</span>
+              </a>
+              <a class="user-nav__inner-link">
+                <img class="user-nav__link-img" src="images/header/icons/cart.svg" alt="cart icon">
+                <span class="user-nav__num">0</span>
+              </a>
+            </div>
+            <a class="user-nav__link user-nav__link-user" href="#">
+              <img class="user-nav__link-img-user" src="images/header/icons/user.svg" alt="user icon">
             </a>
           </div>
-          <a class="user-nav__link user-nav__link-user" href="#">
-            <img class="user-nav__link-img-user" src="images/header/icons/user.svg" alt="user icon">
-          </a>
         </div>
       </div>
-    </div>
-  </header>
-  <main class="main">
-    
-    <section class="top">
-      <div class="top-container">
-        <h1 class="top__title title">Terms & Conditions</h1>
-        <div class="bleadcrumbs">
-          <ul class="bleadcrumbs__list">
-            <li class="bleadcrumbs__item">
-              <a class="bleadcrumbs__link" href="index.html">
-                Home
+    </header>
+    <main class="main">
+
+      <section class="top">
+        <div class="top-container">
+          <h1 class="top__title title">Terms & Conditions</h1>
+          <div class="bleadcrumbs">
+            <ul class="bleadcrumbs__list">
+              <li class="bleadcrumbs__item">
+                <a class="bleadcrumbs__link" href="index.html">
+                  Home
+                </a>
+              </li>
+              <li class="bleadcrumbs__item">
+                <a class="bleadcrumbs__link" href="terms.html">
+                  Terms & Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="terms">
+        <div class="container1170">
+          <h2 class="hidden">Terms & Conditions</h2>
+          <article class="terms__inner">
+            <div class="terms__item">
+              <h2 class="terms__title">Types of Personal Information We Collect</h2>
+              <p class="terms__text">
+                <span>01.</span>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              </p>
+              <p class="terms__text">
+                <span>02.</span>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              </p>
+              <p class="terms__text">
+                <span>03.</span>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </p>
+              <p class="terms__text">
+                <span>04.</span>
+                Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </p>
+              <p class="terms__text">
+                <span>05.</span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              </p>
+            </div>
+            <div class="terms__item">
+              <h2 class="terms__title-info">How marketpmss.com Collects Personal Infonnation</h2>
+              <p class="terms__info">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
+            </div>
+            <div class="terms__item">
+              <h2 class="terms__title-info">How marketprosscom Uses Personal Information</h2>
+              <p class="terms__info">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container1170">
+          <div class="blog__top">
+            <h2 class="title">Our Insights & Articles</h2>
+            <a class="blog__top-link" href="#">View All</a>
+          </div>
+          <div class="blog__items">
+            <div class="blog__item">
+              <a class="blog__item-img" href="blog-one.html">
+                <picture>
+                  <source srcset="images/blog/blog1-30.webp" type="image/webp">
+                  <source srcset="images/blog/blog1-30.avif" type="image/avif">
+                  <img src="images/blog/blog1-30.jpg" alt="blog images">
+                </picture>
+                <button class="blog__item-btn">NEWS</button>
               </a>
+
+              <div class="blog__item-box">
+                <a class="blog__item-title" href="blog-one.html">
+                  Diusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam
+                </a>
+                <div class="blog__box">
+                  <div class="blog__box-data">
+                    28 JANUARY, 2020
+                  </div>
+                  <a class="blog__box-author" href="#">
+                    BY ADMIN
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="blog__item">
+              <a class="blog__item-img" href="blog-one.html">
+                <picture>
+                  <source srcset="images/blog/blog2-30.webp" type="image/webp">
+                  <source srcset="images/blog/blog2-30.avif" type="image/avif">
+                  <img src="images/blog/blog2-30.webp" alt="blog images">
+                </picture>
+                <button class="blog__item-btn">NEWS</button>
+              </a>
+
+              <div class="blog__item-box">
+                <a class="blog__item-title" href="blog-one.html">
+                  Aonsectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore
+                </a>
+                <div class="blog__box">
+                  <div class="blog__box-data">
+                    28 JANUARY, 2020
+                  </div>
+                  <a class="blog__box-author" href="#">
+                    BY ADMIN
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="blog__item">
+              <a class="blog__item-img" href="blog-one.html">
+                <picture>
+                  <source srcset="images/blog/blog3-30.webp" type="image/webp">
+                  <source srcset="images/blog/blog3-30.avif" type="image/avif">
+                  <img src="images/blog/blog3-30.jpg" alt="blog images">
+                </picture>
+                <button class="blog__item-btn">NEWS</button>
+              </a>
+
+              <div class="blog__item-box">
+                <a class="blog__item-title" href="blog-one.html">
+                  Rncididunt ut labore et dolore magna aliqua. Ut enim
+                </a>
+                <div class="blog__box">
+                  <div class="blog__box-data">
+                    28 JANUARY, 2020
+                  </div>
+                  <a class="blog__box-author" href="#">
+                    BY ADMIN
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="blog__partners">
+            <li class="blog__partner-img">
+              <img src="images/partners/4.svg" alt="parents images">
             </li>
-            <li class="bleadcrumbs__item">
-              <a class="bleadcrumbs__link" href="terms.html">
-                Terms & Conditions
-              </a>
+            <li class="blog__partner-img">
+              <img src="images/partners/2.svg" alt="parents images">
+            </li>
+            <li class="blog__partner-img">
+              <img src="images/partners/1.svg" alt="parents images">
+            </li>
+            <li class="blog__partner-img">
+              <img src="images/partners/5.svg" alt="parents images">
+            </li>
+            <li class="blog__partner-img">
+              <img src="images/partners/3.svg" alt="parents images">
             </li>
           </ul>
         </div>
-      </div>
-    </section>
+        <div class="blog__fon">
 
-    <section class="terms">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
       <div class="container1170">
-        <h2 class="hidden">Terms & Conditions</h2>
-        <article class="terms__inner">
-          <div class="terms__item">
-            <h2 class="terms__title">Types of Personal Information We Collect</h2>
-            <p class="terms__text">
-              <span>01.</span>
-              Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-            </p>
-            <p class="terms__text">
-              <span>02.</span>
-              Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-            </p>
-            <p class="terms__text">
-              <span>03.</span>
-              Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </p>
-            <p class="terms__text">
-              <span>04.</span>
-              Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            </p>
-            <p class="terms__text">
-              <span>05.</span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-            </p>
-          </div>
-          <div class="terms__item">
-            <h2 class="terms__title-info">How marketpmss.com Collects Personal Infonnation</h2>
-            <p class="terms__info">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
-          </div>
-          <div class="terms__item">
-            <h2 class="terms__title-info">How marketprosscom Uses Personal Information</h2>
-            <p class="terms__info">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="blog">
-      <div class="container1170">
-        <div class="blog__top">
-          <h2 class="title">Our Insights & Articles</h2>
-          <a class="blog__top-link" href="#">View All</a>
-        </div>
-        <div class="blog__items">
-          <div class="blog__item">
-            <a class="blog__item-img" href="blog-one.html">
-              <picture>
-                <source srcset="images/blog/blog1-30.webp" type="image/webp">
-                <source srcset="images/blog/blog1-30.avif" type="image/avif">
-                <img src="images/blog/blog1-30.jpg" alt="blog images">
-              </picture>
-              <button class="blog__item-btn">NEWS</button>
-            </a>
 
-            <div class="blog__item-box">
-              <a class="blog__item-title" href="blog-one.html">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam
+        <ul class="footer-top">
+          <li class="footer-top__card footer-top__card-contact">
+            <address>
+              <a class="logo" href="index.html">
+                <img class="logo__img" src="images/header/icons/logo.svg" alt="logo img">
               </a>
-              <div class="blog__box">
-                <div class="blog__box-data">
-                  28 JANUARY, 2020
-                </div>
-                <a class="blog__box-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="blog__item">
-            <a class="blog__item-img" href="blog-one.html">
-              <picture>
-                <source srcset="images/blog/blog2-30.webp" type="image/webp">
-                <source srcset="images/blog/blog2-30.avif" type="image/avif">
-                <img src="images/blog/blog2-30.webp" alt="blog images">
-              </picture>
-              <button class="blog__item-btn">NEWS</button>
-            </a>
-
-            <div class="blog__item-box">
-              <a class="blog__item-title" href="blog-one.html">
-                Aonsectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
+              <a class="footer-top__address" href="#">
+                4772 Wines Lane
+                Houston, TX 77032
               </a>
-              <div class="blog__box">
-                <div class="blog__box-data">
-                  28 JANUARY, 2020
-                </div>
-                <a class="blog__box-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="blog__item">
-            <a class="blog__item-img" href="blog-one.html">
-              <picture>
-                <source srcset="images/blog/blog3-30.webp" type="image/webp">
-                <source srcset="images/blog/blog3-30.avif" type="image/avif">
-                <img src="images/blog/blog3-30.jpg" alt="blog images">
-              </picture>
-              <button class="blog__item-btn">NEWS</button>
-            </a>
-
-            <div class="blog__item-box">
-              <a class="blog__item-title" href="blog-one.html">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </a>
-              <div class="blog__box">
-                <div class="blog__box-data">
-                  28 JANUARY, 2020
-                </div>
-                <a class="blog__box-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul class="blog__partners">
-          <li class="blog__partner-img">
-            <img src="images/partners/4.svg" alt="parents images">
+              <a class="footer-top__phone" href="tel:8323475843">+832-347-5843</a>
+              <a class="footer-top__email" href="mailto:contact@Glee.com">contact@Glee.com</a>
+            </address>
           </li>
-          <li class="blog__partner-img">
-            <img src="images/partners/2.svg" alt="parents images">
+          <li class="footer-top__card footer-top__card-nav">
+            <button class="footer-top__title">Services</button>
+            <ul class="footer-top__list">
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="about.html">About us</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#">Return Policy</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="blog.html">Our Blog</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="terms.html">Terms & Condition</a>
+              </li>
+            </ul>
           </li>
-          <li class="blog__partner-img">
-            <img src="images/partners/1.svg" alt="parents images">
+          <li class="footer-top__card footer-top__card-nav">
+            <button class="footer-top__title">Account</button>
+            <ul class="footer-top__list">
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#">Your Account</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="#">Checkout</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="login.html">Login</a>
+              </li>
+              <li class="footer-top__item">
+                <a class="footer-top__link" href="">Register</a>
+              </li>
+            </ul>
           </li>
-          <li class="blog__partner-img">
-            <img src="images/partners/5.svg" alt="parents images">
-          </li>
-          <li class="blog__partner-img">
-            <img src="images/partners/3.svg" alt="parents images">
-          </li>
-        </ul>
-      </div>
-      <div class="blog__fon">
-
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container1170">
-
-      <ul class="footer-top">
-        <li class="footer-top__card footer-top__card-contact">
-          <address>
-            <a class="logo" href="index.html">
-              <img class="logo__img" src="images/header/icons/logo.svg" alt="logo img">
-            </a>
-            <a class="footer-top__address" href="#">
-              4772 Wines Lane
-              Houston, TX 77032
-            </a>
-            <a class="footer-top__phone" href="tel:8323475843">+832-347-5843</a>
-            <a class="footer-top__email" href="mailto:contact@Glee.com">contact@Glee.com</a>
-          </address>
-        </li>
-        <li class="footer-top__card footer-top__card-nav">
-          <button class="footer-top__title">Services</button>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="about.html">About us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Return Policy</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="blog.html">Our Blog</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="terms.html">Terms & Condition</a>
-            </li>
-          </ul>
-        </li>
-        <li class="footer-top__card footer-top__card-nav">
-          <button class="footer-top__title">Account</button>
-          <ul class="footer-top__list">
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Your Account</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#">Checkout</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="login.html">Login</a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="">Register</a>
-            </li>
-          </ul>
-        </li>
-        <li class="footer-top__card footer-top__card-form">
-          <button class="footer-top__title">newsletter</button>
-          <p class="footer-top__text">
-            Subscribe by our newsletter and get
-            update protidin.
-          </p>
-          <!-- <form class="footer-top__form" action="#" >
+          <li class="footer-top__card footer-top__card-form">
+            <button class="footer-top__title">newsletter</button>
+            <p class="footer-top__text">
+              Subscribe by our newsletter and get
+              update protidin.
+            </p>
+            <!-- <form class="footer-top__form" action="#" >
           <input class="footer-top__form-input" type="email" placeholder="Email address" required>
           <button class="footer-top__form-btn" type="submit">Subscribe</button>
         </form> -->
 
-          <form class="footer-top__form send-form-newsletter" action="#">
-            <input type="hidden" name="project_name" value="marcho">
-            <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
-            <input type="hidden" name="form_subject" value="Marcho">
-            <input class="footer-top__form-input" value="" name="email" type="email" placeholder="Your email address"
-              required>
-              <input type = "text" name = ":" style="display: none" value=""/>
-            <button class="footer-top__form-btn" type="submit">Subscribe</button>
-          </form>
+            <form class="footer-top__form send-form-newsletter" action="#">
+              <input type="hidden" name="project_name" value="marcho">
+              <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
+              <input type="hidden" name="form_subject" value="Marcho">
+              <input class="footer-top__form-input" value="" name="email" type="email" placeholder="Your email address"
+                required>
+              <input type="text" name=":" style="display: none" value="" />
+              <button class="footer-top__form-btn" type="submit">Subscribe</button>
+            </form>
 
-        </li>
-      </ul>
-
-      <div class="footer-buttom">
-        <p class="footer-buttom__copy">
-          ©2020 CopyRight Example. All rights reserved.
-        </p>
-        <ul class="footer-buttom__page">
-          <li class="footer-buttom__page-list">
-            <a class="footer-buttom__page-link" href="index.html">Home</a>
-          </li>
-
-          <li class="footer-buttom__page-list">
-            <a class="footer-buttom__page-link" href="about.html">About</a>
-          </li>
-
-          <li class="footer-buttom__page-list">
-            <a class="footer-buttom__page-link" href="blog.html">Blog</a>
-          </li>
-
-          <li class="footer-buttom__page-list">
-            <a class="footer-buttom__page-link" href="contact.html">Contact</a>
-          </li>
-          <li class="footer-buttom__page-list">
-            <a class="footer-buttom__page-link" href="terms.html">Terms</a>
           </li>
         </ul>
+
+        <div class="footer-buttom">
+          <p class="footer-buttom__copy">
+            ©2020 CopyRight Example. All rights reserved.
+          </p>
+          <ul class="footer-buttom__page">
+            <li class="footer-buttom__page-list">
+              <a class="footer-buttom__page-link" href="index.html">Home</a>
+            </li>
+
+            <li class="footer-buttom__page-list">
+              <a class="footer-buttom__page-link" href="about.html">About</a>
+            </li>
+
+            <li class="footer-buttom__page-list">
+              <a class="footer-buttom__page-link" href="blog.html">Blog</a>
+            </li>
+
+            <li class="footer-buttom__page-list">
+              <a class="footer-buttom__page-link" href="contact.html">Contact</a>
+            </li>
+            <li class="footer-buttom__page-list">
+              <a class="footer-buttom__page-link" href="terms.html">Terms</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>

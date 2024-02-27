@@ -69,6 +69,12 @@
     }
 
     &__item-author {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: black;
+        }
+
         &:focus {
             @include black-focus;
         }
@@ -93,6 +99,17 @@
         margin-bottom: 30px;
     }
 
+    &__item-arrow {
+        position: absolute;
+        right: 22px;
+        top: 25px;
+
+        .cls-1 {
+            fill: #a3bbc8;
+            fill-rule: evenodd;
+        }
+    }
+
     &__item-btn {
         display: inline-block;
         position: relative;
@@ -104,17 +121,29 @@
         height: 60px;
         padding-left: 25px;
         line-height: 60px;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        .cls-1 {
+            transition: fill 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: #a3bbc8;
+
+            .cls-1 {
+                fill: #fff;
+                fill-rule: #a3bbc8;
+            }
+
+        }
 
         &:focus {
             @include black-focus;
         }
     }
 
-    &__item-arrow {
-        position: absolute;
-        right: 22px;
-        top: 25px;
-    }
+
 
     .blog-page__pagination {
         justify-content: left;

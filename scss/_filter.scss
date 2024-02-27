@@ -40,6 +40,7 @@
         justify-content: space-between;
         padding: 16px 23px 16px 16px;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     &__text {
@@ -86,6 +87,8 @@
     width: 15px;
     height: 15px;
     background-color: #a3bbc8;
+    cursor: pointer;
+
 }
 
 .irs--flat .irs-handle>i:first-child {
@@ -128,6 +131,7 @@
         justify-content: space-between;
         padding: 16px 23px 16px 16px;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     &__text {

@@ -31,13 +31,6 @@
 
     }
 
-    .input-captcha,
-    .img-captcha {
-        width: 180px;
-        display: block;
-        margin-bottom: 15px;
-    }
-
     &__text-input {
         @extend %rubik-400;
         color: #565872;
@@ -108,8 +101,18 @@
         padding: 18px 35px;
         border-radius: 5px;
 
+
+
         &:focus {
             @include white-focus;
+        }
+
+        transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+        &:hover {
+            color: #a3bbc8;
+            background-color: white;
         }
     }
 }
