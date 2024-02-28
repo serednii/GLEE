@@ -15,6 +15,25 @@ function clearForm(formElement) {
   })
 }
 
+const showInformationSendMail = (message, path) => {
+  const modals = document.querySelectorAll('.modal');
+  const modalOverlay = document.querySelector('.modal-overlay ');
+  modals.forEach((el) => {
+    el.classList.remove('modal--visible');
+  });
+
+  const modalVisible = document.querySelector(`[data-target="${path}"]`);
+  console.log(modalVisible)
+  console.log(modalVisible.querySelector('.modal-message'))
+  if (modalVisible) {
+    modalVisible.querySelector('.modal-message__content').innerText = message
+    modalVisible.classList.add('modal--visible');
+    modalOverlay?.classList.add('modal-overlay--visible');
+  }
+
+}
+
+
 
 document.querySelectorAll('.send-form-mail').forEach((el) => {
 
@@ -48,11 +67,13 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          alert("Письмо отправлено");
+          // alert("Письмо отправлено");
+          showInformationSendMail("Letter sent", 'send-message-popup');
           clearForm(e)
           // e.target.querySelectorAll('textarea').forEach(e => e.value = "")
         } else {
-          alert("Письмо не отправлено произошла ошибка:  " + result.message);
+          // alert("The message was not sent, there was an error:  " + result.message);
+          showInformationSendMail("The message was not sent, there was an error:  " + result.message, 'send-message-popup-error');
         }
       })
       .catch(error => {

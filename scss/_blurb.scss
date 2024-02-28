@@ -84,7 +84,15 @@
 }
 
 
-@media(max-width: 1400px) {
+@media(max-width: 1700px) {
+    .blurb {
+        &__item-img {
+            left: 50px;
+        }
+    }
+}
+
+@media(max-width: 1500px) {
     .blurb {
         &__item-img {
             left: 5px;

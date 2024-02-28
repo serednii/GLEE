@@ -70,6 +70,10 @@
         &-link {
             position: relative;
             transition: all .3s;
+            background-color: transparent;
+            border: none;
+            outline: transparent;
+            cursor: pointer;
 
             &:hover {
                 transform: scale(1.2);
@@ -94,6 +98,10 @@
     &__link {
         position: relative;
         transition: all 0.3s;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        cursor: pointer;
 
         &:hover {
             border-color: #f9fafb;
@@ -188,6 +196,7 @@
         &__list-link {
             display: block;
             padding: 12px 0;
+
         }
 
         &__btn {

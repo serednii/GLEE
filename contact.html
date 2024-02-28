@@ -15,7 +15,7 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#9cb0b3">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
@@ -25,6 +25,40 @@
 
 <body>
   <div class="display-parametr"></div>
+  <!-- <div class="btn-modals__inner">
+    <button class="btn-modal" data-path="form-popup">Окно 1</button>
+    <button class="btn-modal" data-path="me-popup">Окно 2</button>
+  </div> -->
+
+
+  <div class="modals">
+    <div class="modal-overlay">
+      <div class="modal modal--1" data-target="heart-popup">
+        <button class="modal-close-btn">&#128473;</button>
+        Окно 1 heart
+      </div>
+      <div class="modal modal--2" data-target="cart-popup">
+        <button class="modal-close-btn">&#128473;</button>
+        Окно 2 cart
+      </div>
+
+      <div class="modal modal-message" data-target="send-message-popup">
+        <button class="modal-close-btn">&#128473;</button>
+        <p class="modal-message__content"></p>
+      </div>
+      <div class="modal modal-message" data-target="send-message-popup-error">
+        <button class="modal-close-btn">&#128473;</button>
+        <p class="modal-message__content"></p>
+      </div>
+
+      <div class="modal modal-message" data-target="send-news-letter--popup">
+        <button class="modal-close-btn">&#128473;</button>
+        <p class="modal-message"></p>
+      </div>
+    </div>
+  </div>
+
+
   <div class="parent">
     <header class="header">
       <div class="container">
@@ -58,22 +92,22 @@
             </ul>
           </nav>
           <div class="user-nav">
-            <a class="user-nav__link user-nav__link--search" href="#">
+            <button class="user-nav__link user-nav__link--search" href="#">
               <img class="user-nav__link-img" src="images/header/icons/search.svg" alt="search icon">
-            </a>
+            </button>
             <div class="user-nav__inner">
-              <a class="user-nav__inner-link">
+              <button class="user-nav__inner-link btn-modal" data-path="heart-popup">
                 <img class="user-nav__link-img" src="images/header/icons/heart.svg" alt="heart icon">
                 <span class="user-nav__num">0</span>
-              </a>
-              <a class="user-nav__inner-link">
+              </button>
+              <button class="user-nav__inner-link btn-modal" data-path="cart-popup">
                 <img class="user-nav__link-img" src="images/header/icons/cart.svg" alt="cart icon">
                 <span class="user-nav__num">0</span>
-              </a>
+              </button>
             </div>
-            <a class="user-nav__link user-nav__link-user" href="#">
+            <button class="user-nav__link user-nav__link-user" href="#">
               <img class="user-nav__link-img-user" src="images/header/icons/user.svg" alt="user icon">
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -397,8 +431,13 @@
         </div>
       </div>
     </footer>
+
+
+
+
+
   </div>
-  <script defer src="js/map.js"></script>
+  <!-- <script defer src="js/map.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>
 
