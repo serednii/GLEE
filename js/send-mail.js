@@ -73,7 +73,7 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
           // e.target.querySelectorAll('textarea').forEach(e => e.value = "")
         } else {
           // alert("The message was not sent, there was an error:  " + result.message);
-          showInformationSendMail("The message was not sent, there was an error:  " + result.message, 'send-message-popup-error');
+          showInformationSendMail("The message was not sent, there was an error:  " + result.message, 'send-message-popup');
         }
       })
       .catch(error => {
