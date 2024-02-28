@@ -116,3 +116,10 @@
         }
     }
 }
+
+
+@media(max-width: 1160px) {
+    .map {
+        aspect-ratio: 5 / 9;
+    }
+}
