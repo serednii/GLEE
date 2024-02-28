@@ -1,37 +1,4 @@
-const mailPath = 'http://glee.smm.zzz.com.ua/send-mail.php';
-
-function formDataToObject(formData) {
-  let jsonObject = {};
-  for (const [key, value] of formData.entries()) {
-    jsonObject[key] = value;
-  }
-  return jsonObject;
-}
-
-function clearForm(formElement) {
-  formElement.target.querySelectorAll('input:not([type="hidden"]) ,textarea').forEach(e => {
-    e.checked = e.defaultChecked;
-    e.value = "";
-  })
-}
-
-const showInformationSendMail = (message, path) => {
-  const modals = document.querySelectorAll('.modal');
-  const modalOverlay = document.querySelector('.modal-overlay ');
-  modals.forEach((el) => {
-    el.classList.remove('modal--visible');
-  });
-
-  const modalVisible = document.querySelector(`[data-target="${path}"]`);
-  console.log(modalVisible)
-  console.log(modalVisible.querySelector('.modal-message'))
-  if (modalVisible) {
-    modalVisible.querySelector('.modal-message__content').innerText = message
-    modalVisible.classList.add('modal--visible');
-    modalOverlay?.classList.add('modal-overlay--visible');
-  }
-
-}
+const sendMailPatch = 'http://glee.smm.zzz.com.ua/send-mail.php';
 
 
 
@@ -47,9 +14,8 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       return;
     }
 
-    // console.log(data)
 
-    fetch(mailPath, {
+    fetch(sendMailPatch, {
       method: 'POST',
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

@@ -4,23 +4,11 @@ const modals = document.querySelectorAll('.modal');
 const modalCloseBtn = document.querySelectorAll('.modal-close-btn')
 
 
-const CollapsingTheElementByWidth = (element, callback) => {
-    let widthPoppa = element.offsetWidth;
-    const timerWidth = setInterval(() => {
-        widthPoppa -= 3;
-        element.style.width = widthPoppa + "px";
-        if (widthPoppa <= 0) {
-            clearInterval(timerWidth);
-            element.style.width = "";
-            callback();
-        }
-    }, 1);
-}
 
 btns.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
-
+        console.log()
         modals.forEach((el) => {
             if (el.contains('modal--visible')) {
                 el.classList.add('modal--out-visible');
@@ -37,10 +25,13 @@ btns.forEach((el) => {
 
 modalOverlay && modalOverlay.addEventListener('click', (e) => {
     if (e.target == modalOverlay) {
-        modalOverlay.classList.remove('modal-overlay--visible');
+        // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
-                CollapsingTheElementByWidth(el, () => el.classList.remove('modal--visible'))
+                CollapsingTheElementByWidth(el, () => {
+                    el.classList.remove('modal--visible');
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                })
             }
         });
     }
@@ -48,9 +39,14 @@ modalOverlay && modalOverlay.addEventListener('click', (e) => {
 
 modalCloseBtn.forEach(e => {
     e.addEventListener('click', (e) => {
-        modalOverlay.classList.remove('modal-overlay--visible');
+        // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
-            CollapsingTheElementByWidth(el, () => el.classList.remove('modal--visible'))
+            if (el.classList.contains('modal--visible')) {
+                CollapsingTheElementByWidth(el, () => {
+                    el.classList.remove('modal--visible');
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                })
+            }
         });
     })
 })
