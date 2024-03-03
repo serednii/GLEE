@@ -157,6 +157,7 @@
 
 @media(max-width: 620px) {
     .about-us {
+
         &__info {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -193,6 +194,7 @@
             p {
                 padding-bottom: 12px;
             }
+
         }
     }
 }

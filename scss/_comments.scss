@@ -3,6 +3,13 @@
     margin-bottom: 40px;
     display: flex;
 
+    &__title {
+        margin-bottom: 50px;
+        color: $title;
+        font-size: 24px;
+        @extend %rubik-500;
+    }
+
     &__img {
         margin-right: 30px;
         min-width: 100px;
@@ -38,9 +45,9 @@
     }
 
     &__content-reply {
+        position: relative;
         display: inline-block;
         color: #516278;
-        position: relative;
 
         &::after {
             content: "";
@@ -57,23 +64,37 @@
             @include white-focus;
         }
     }
+
+    &-reply {
+        margin-left: 130px;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 1px solid #e4e4e4;
+        padding: 20px 0 20px;
+    }
 }
+
 
 @media(max-width: 620px) {
 
 
     .comments {
+        flex-direction: column;
+
         &-reply {
             margin-left: 0;
         }
-    }
 
-}
-
-@media(max-width: 375px) {
-    .comments {
         &__img {
-            display: none;
+            margin-bottom: 15px;
         }
     }
+
 }
+
+// @media(max-width: 375px) {
+//     .comments {
+//         &__img {
+//             display: none;
+//         }
+//     }
+// }

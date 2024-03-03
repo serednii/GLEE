@@ -26,6 +26,8 @@ btns.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
         console.log(path)
+        document.body.style.overflowY = 'hidden';
+
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
                 el.classList.add('modal--out-visible');
@@ -42,6 +44,7 @@ btns.forEach((el) => {
 
 modalOverlay && modalOverlay.addEventListener('click', (e) => {
     if (e.target == modalOverlay) {
+        document.body.style.overflowY = 'auto';
         // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
@@ -56,6 +59,7 @@ modalOverlay && modalOverlay.addEventListener('click', (e) => {
 
 modalCloseBtn.forEach(e => {
     e.addEventListener('click', (e) => {
+        document.body.style.overflowY = 'auto';
         // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {

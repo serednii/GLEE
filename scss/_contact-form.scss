@@ -123,3 +123,48 @@
         aspect-ratio: 6 / 9;
     }
 }
+
+
+@media(max-width: 1200px) {
+
+    .contact-form {
+        max-width: 100%;
+        width: 100%;
+
+        &__map {
+            display: block;
+        }
+
+        &__box-input {
+            display: block;
+        }
+
+        &__input {
+            margin-bottom: 26px;
+        }
+
+        &__text-input {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__textarea {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__btn {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media(max-width: 840px) {
+    .contact-form-map {
+        flex-wrap: wrap;
+
+        form {
+            margin-right: 0;
+        }
+    }
+}

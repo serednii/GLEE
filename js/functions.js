@@ -29,5 +29,5 @@ const CollapsingTheElementByWidth = (element, callback) => {
             callback();
             clearInterval(timerWidth);
         }
-    }, 1);
+    }, 2);
 }
