@@ -14,7 +14,7 @@
         max-width: 870px;
         min-height: 390px;
         width: 100%;
-        background-color: #feefe2;
+        background-color: $VeryLightYellow;
 
         &-img {
             position: absolute;
@@ -31,7 +31,7 @@
         &-title {
             @extend %dmsans-700;
             font-size: 26px;
-            color: #243f4d;
+            color: $darkBlue;
             margin-bottom: 25px;
             max-width: 350px;
             line-height: 1.4;
@@ -39,7 +39,7 @@
 
         &-text {
             @extend %rubik-400;
-            color: #243f4d;
+            color: $darkBlue;
             font-size: 16px;
             margin-bottom: 36px;
             word-break: break-all;
@@ -53,15 +53,15 @@
             padding-left: 25px;
             position: relative;
             margin-left: 0;
-            border: 1px solid #b3b7b5;
+            border: 1px solid $LightGrayishBlue;
             cursor: pointer;
             border-radius: 5px;
-            color: #436372;
+            color: $title;
             background-color: transparent;
             transition: all 0.3s;
 
             &:hover {
-                background-color: #243f4d;
+                background-color: $darkBlue;
                 color: $search;
             }
 
@@ -77,7 +77,7 @@
             top: 24px;
 
             path {
-                fill: #436372 !important;
+                fill: $title  !important;
             }
         }
     }

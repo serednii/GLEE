@@ -35,12 +35,12 @@
     transition: color 0.3s ease-in-out;
 
     &:hover {
-      color: #a3bbc8;
+      color: $accent;
     }
 
     &:focus {
-      background-color: #f9fafb;
-      border-color: #f9fafb;
+      background-color: $VeryLightGray;
+      border-color: $VeryLightGray;
       box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
       outline: 0;
       border-radius: 10px;

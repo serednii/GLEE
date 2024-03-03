@@ -42,7 +42,7 @@
     }
 
     &__text {
-        color: #243f4d;
+        color: $darkBlue;
         font-size: 16px;
         @extend %rubik-400;
         line-height: 1.5;
@@ -70,8 +70,8 @@
         color 0.3s ease-in-out;
 
         &:hover {
-            color: #a3bbc8;
-            background-color: white;
+            color: $accent;
+            background-color: $darkBlue;
         }
     }
 
@@ -173,14 +173,14 @@
     &__title {
         font-size: 16px;
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
         margin-right: 5px;
     }
 
     &__text {
         font-size: 16px;
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
     }
 }
 
@@ -240,7 +240,7 @@
 
     &__top-item {
         display: inline-block;
-        background-color: #edf1f4;
+        background-color: $search;
         padding: 18px 23px;
         border-radius: 5px;
         cursor: pointer;
@@ -273,7 +273,7 @@
     &__content-item-text {
         @extend %rubik-400;
         font-size: 16px;
-        color: #243f4d;
+        color: $darkBlue;
     }
 }
 

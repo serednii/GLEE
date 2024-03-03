@@ -29,8 +29,8 @@
         }
 
         &:hover {
-            color: #a3bbc8;
-            border-bottom-color: #a3bbc8;
+            color: $accent;
+            border-bottom-color: $accent;
         }
 
     }
@@ -75,7 +75,7 @@
     &__item-type {
         @extend %dmsans-700;
         font-size: 16px;
-        color: #a3bbc8;
+        color: $accent;
     }
 
     &__video {

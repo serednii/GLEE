@@ -47,7 +47,7 @@
         }
 
         &:focus {
-            outline: 1px solid #a3bbc8;
+            outline: 1px solid $accent;
             color: #333;
         }
     }
@@ -81,7 +81,7 @@
 
         &:focus {
             color: #333;
-            outline: 1px solid #a3bbc8;
+            outline: 1px solid $accent;
         }
     }
 
@@ -111,8 +111,8 @@
         color 0.3s ease-in-out;
 
         &:hover {
-            color: #a3bbc8;
-            background-color: white;
+            color: $accent;
+            background-color: $darkBlue ;
         }
     }
 }
@@ -120,6 +120,6 @@
 
 @media(max-width: 1160px) {
     .map {
-        aspect-ratio: 5 / 9;
+        aspect-ratio: 6 / 9;
     }
 }

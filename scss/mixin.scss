@@ -1,5 +1,5 @@
 @mixin white-focus {
-    border-color: #f9fafb;
+    border-color: $VeryLightGray;
     box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
     outline: 0;
 }
@@ -10,8 +10,15 @@
     box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
 }
 
+@mixin blue-hover {
+    background-color: $darkBlue;
+    color: $accent;
+}
+
+
+
 // @include white-focus;
-// border-color: #f9fafb;
+// border-color: $VeryLightGray;
 // box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
 // outline: 0;
 

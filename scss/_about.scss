@@ -29,27 +29,27 @@
         p {
             @extend %rubik-400;
             padding-bottom: 16px;
-            color: #243f4d;
+            color: $darkBlue;
         }
     }
 
     &__years {
         @extend %rubik-500;
         font-size: 140px;
-        color: $user;
+        color: $accent;
     }
 
     &__title {
         font-size: 36px;
         @extend %dmsans-700;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 50px;
     }
 
     &__text {
         @extend %rubik-400;
         padding-bottom: 65px;
-        border-bottom: 2px solid #ebeef3;
+        border-bottom: 2px solid $lightGray;
         margin-bottom: 30px;
         line-height: 1.5;
     }
@@ -66,7 +66,7 @@
 
     &__item::after {
         content: "";
-        border-right: 1px solid #e6eaf0;
+        border-right: 1px solid $lightBlue;
         padding-right: 26px;
     }
 
@@ -85,108 +85,128 @@
 
     &__label {
         padding-left: 4px;
-        color: #4c4c4c;
+        color: $darkGray;
     }
 }
 
 
-@media(max-width: 1230px){
-   .about-us{
-        &__info{
+@media(max-width: 1230px) {
+    .about-us {
+
+        &__info {
             display: grid;
             gap: 20px;
-            grid-template-columns:  repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
-        &__item:nth-child(2)::after{
+
+        &__item:nth-child(2)::after {
             border-right: 1px solid transparent;
         }
-   } 
+
+    }
 }
 
-@media(max-width: 1100px){
-    .about-us{
-        &__inner{
+@media(max-width: 1100px) {
+    .about-us {
+        &__inner {
             display: block;
         }
-        &__img{
+
+        &__img {
             margin: 0 auto;
         }
-        &__info{
+
+        &__info {
             display: flex;
         }
-        &__item:nth-child(2)::after{
-            border-right: 1px solid #e6eaf0;
+
+        &__item:nth-child(2)::after {
+            border-right: 1px solid $lightBlue;
         }
     }
 
 }
 
-@media(max-width: 768px){
-    .about-us{
-       &__content{
-        margin-left: 20px;
-       }
-       &__title{
-        margin-bottom: 20px;
-       }
-       &__text{
-        padding-bottom: 48px;
-       }
-       &__img{
-        width: 80%;
-       }
-       &__years{
-        font-size: 120px;
-       }
-       &__time-left{
-        top: 30px;
-       }
+@media(max-width: 768px) {
+    .about-us {
+        &__content {
+            margin-left: 20px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            padding-bottom: 48px;
+        }
+
+        &__img {
+            width: 80%;
+        }
+
+        &__years {
+            font-size: 120px;
+        }
+
+        &__time-left {
+            top: 30px;
+        }
     }
 }
 
-@media(max-width: 620px){
-    .about-us{
-        &__info{
+@media(max-width: 620px) {
+    .about-us {
+        &__info {
             display: grid;
-            grid-template-columns:  repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
-        &__item::after{
+
+        &__item::after {
             display: none;
         }
-        &__item{
+
+        &__item {
             justify-content: center;
         }
-        &__item:nth-child(3){
+
+        &__item:nth-child(3) {
             grid-column: 1/3;
         }
-        &__title{
+
+        &__title {
             font-size: 28px;
         }
-        &__text{
-           padding-bottom: 35px;
+
+        &__text {
+            padding-bottom: 35px;
         }
-        &__years{
-          font-size: 105px;
+
+        &__years {
+            font-size: 105px;
         }
-        &__time-left{
-          top: 24px;
-          left: 145px;
-          p{
-            padding-bottom: 12px;
-          }
+
+        &__time-left {
+            top: 24px;
+            left: 145px;
+
+            p {
+                padding-bottom: 12px;
+            }
         }
-   } 
+    }
 }
 
-@media(max-width: 375px){
-    .about-us{
-        &__info{
+@media(max-width: 375px) {
+    .about-us {
+        &__info {
             display: grid;
-            grid-template-columns:  repeat(1, 1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
-        &__item:nth-child(3){
+
+        &__item:nth-child(3) {
             grid-column: 1/2;
         }
     }
- 
+
 }

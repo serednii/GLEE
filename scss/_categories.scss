@@ -32,8 +32,8 @@
         }
 
         &:hover {
-            color: #a3bbc8;
-            border-bottom-color: #a3bbc8;
+            color: $accent;
+            border-bottom-color: $accent;
         }
     }
 
@@ -101,12 +101,12 @@
     &-item__title {
         font-size: 16px;
         @extend %dmsans-400;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 15px;
         transition: color 0.3s ease-in-out;
 
         &:focus {
-            color: #a3bbc8;
+            color: $accent;
         }
     }
 
@@ -114,7 +114,7 @@
         display: block;
         text-align: center;
         @extend %dmsans-700;
-        color: #a3bbc8;
+        color: $accent;
         margin-bottom: 35px;
     }
 
@@ -142,7 +142,7 @@
         &:focus {
             border-radius: 50%;
             @include white-focus;
-            border-color: #f9fafb;
+            border-color: $VeryLightGray;
             box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
             outline: 0;
         }

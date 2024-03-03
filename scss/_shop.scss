@@ -65,7 +65,7 @@
 
 
     &:hover {
-        color: #a3bbc8;
+        color: $accent;
     }
 
     &:focus {
@@ -85,7 +85,7 @@
 .shop-content-item-text {
     @extend %rubik-400;
     font-size: 16px;
-    color: #243f4d;
+    color: $darkBlue;
     margin-bottom: 37px;
 }
 
@@ -116,7 +116,7 @@
 
 .shop-content-item-links {
     button:hover {
-        background-color: #a3bbc8;
+        background-color: $accent;
 
         svg {
             path {

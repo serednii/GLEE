@@ -1,5 +1,5 @@
 .top {
-    background-color: #edf1f4;
+    background-color: $search;
     margin-bottom: 120px;
 
     &-container {
@@ -14,14 +14,14 @@
     }
 }
 
-@media(max-width: 768px){
-    .top{
+@media(max-width: 768px) {
+    .top {
         margin-bottom: 60px;
     }
 }
 
-@media(max-width: 450px){
-    .top{
+@media(max-width: 450px) {
+    .top {
         margin-bottom: 20px;
     }
 }

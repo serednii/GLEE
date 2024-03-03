@@ -9,7 +9,7 @@
         text-transform: uppercase;
         @extend %dmsans-700;
         font-size: 18px;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 30px;
         margin-right: 17px;
     }
@@ -20,7 +20,7 @@
         height: 3px;
         width: 39px;
         margin-top: 10px;
-        background-color: #a3bbc8;
+        background-color: $accent;
     }
 }
 
@@ -31,7 +31,7 @@
         @extend %checkbox-hidden;
 
         &:checked+.filter-category__box {
-            background-color: #edf1f4;
+            background-color: $search;
         }
     }
 
@@ -45,7 +45,7 @@
 
     &__text {
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
     }
 }
 
@@ -67,7 +67,7 @@
 .irs--flat .irs-bar {
     top: 25px;
     height: 4px;
-    background-color: #a3bbc8;
+    background-color: $accent;
 }
 
 .irs--flat .irs-min,
@@ -86,7 +86,7 @@
     top: 20px;
     width: 15px;
     height: 15px;
-    background-color: #a3bbc8;
+    background-color: $accent;
     cursor: pointer;
 
 }
@@ -99,7 +99,7 @@
     width: 2px;
     height: 100%;
     margin-left: -1px;
-    background-color: #a3bbc8;
+    background-color: $accent;
 }
 
 .irs--flat .irs-from,
@@ -110,7 +110,7 @@
 
 .irs--flat .irs-handle.state_hover>i:first-child,
 .irs--flat .irs-handle:hover>i:first-child {
-    background-color: #a3bbc8;
+    background-color: $accent;
 }
 
 .filter-brand {
@@ -118,10 +118,10 @@
         @extend %checkbox-hidden;
 
         &:checked+.filter-brand__box {
-            background-color: #edf1f4;
+            background-color: $search;
 
             .filter-brand__num {
-                color: #243f4d;
+                color: $darkBlue;
             }
         }
     }
@@ -136,7 +136,7 @@
 
     &__text {
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
         font-size: 16px;
     }
 

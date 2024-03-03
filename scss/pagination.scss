@@ -16,12 +16,12 @@
         height: 56px;
 
         &:hover {
-            background-color: #a3bbc8;
+            background-color: $accent;
         }
 
         &:focus {
             outline: 0;
-            background-color: #a3bbc8;
+            background-color: $accent;
         }
     }
 
@@ -35,7 +35,7 @@
     {
     @extend %rubik-400;
     font-size: 16px;
-    color: #243f4d;
+    color: $darkBlue;
     display: block;
     width: 100%;
     height: 100%;

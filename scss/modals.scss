@@ -22,6 +22,7 @@
     width: 100%;
     opacity: 0;
     z-index: 10000;
+    padding: 15px;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -41,7 +42,7 @@
         outline: none;
         background-color: transparent;
         font-size: 1.5rem;
-        color: red;
+        // color: red;
         cursor: pointer;
         position: absolute;
         top: 10px;
@@ -49,6 +50,21 @@
     }
 }
 
+// .modal__card {
+//     padding: 50px 0px 20px;
+//     max-width: 500px;
+//     width: 100%;
+//     min-height: 120px;
+//     height: initial;
+//     background-color: antiquewhite;
+//     border-radius: 10px;
+//     font-size: 1rem;
+//     text-align: center;
+//     animation-name: inpopap;
+//     animation-duration: 1.3s;
+//     overflow: hidden;
+// }
+.modal__card,
 .modal-message {
     padding: 50px 0px 20px;
     max-width: 500px;

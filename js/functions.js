@@ -13,22 +13,7 @@ function clearForm(formElement) {
     })
 }
 
-const showInformationSendMail = (message, path) => {
-    const modals = document.querySelectorAll('.modal');
-    const modalOverlay = document.querySelector('.modal-overlay ');
-    modals.forEach((el) => {
-        el.classList.remove('modal--visible');
-    });
 
-    const modalVisible = document.querySelector(`[data-target="${path}"]`);
-    console.log(modalVisible.querySelector('.modal-message'))
-    if (modalVisible) {
-        modalVisible.querySelector('.modal-message__content').innerText = message
-        modalVisible.classList.add('modal--visible');
-        modalOverlay?.classList.add('modal-overlay--visible');
-    }
-
-}
 
 
 //Зменшує переданий елемент по ширині від діючого значення до 0

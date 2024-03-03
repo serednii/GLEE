@@ -1,6 +1,6 @@
 .statistics {
     margin-bottom: 120px;
-    background-color: #fcd7b6;
+    background-color: $default;
 
     &__wraper {
         display: flex;
@@ -24,7 +24,7 @@
     &__item-text {
         text-align: center;
         @extend %dmsans-700;
-        color: #243f4d;
+        color: $darkBlue;
     }
 
     &__title {
@@ -37,8 +37,8 @@
     }
 }
 
-@media(max-width: 375px){
-    .statistics{
+@media(max-width: 375px) {
+    .statistics {
         display: none;
     }
 }

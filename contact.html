@@ -33,19 +33,55 @@
 
   <div class="modals">
     <div class="modal-overlay">
-      <div class="modal modal--1" data-target="heart-popup">
-        <button class="modal-close-btn">&#128473;</button>
-        Окно 1 heart
+
+      <div class="modal modal__card modal__card-heart" data-target="heart-popup">
+        <button class="modal-close-btn" aria-label="close popup">
+          <svg viewBox="0 0 20 20" fill="currentColor" height="1em" width="1em">
+            <path
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z">
+            </path>
+          </svg>
+        </button>
+        <p class="modal__card-title">Heart</p>
+        <ul>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+        </ul>
       </div>
-      <div class="modal modal--2" data-target="cart-popup">
-        <button class="modal-close-btn">&#128473;</button>
-        Окно 2 cart
+
+      <div class="modal modal__card modal__card-cart" data-target="cart-popup">
+        <button class="modal-close-btn" aria-label="close popup">
+          <svg viewBox="0 0 20 20" fill="currentColor" height="1em" width="1em">
+            <path
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z">
+            </path>
+          </svg>
+        </button>
+        <p class="modal__card-title">Cart</p>
+        <ul>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+          <li>tovar</li>
+        </ul>
+
       </div>
 
       <div class="modal modal-message" data-target="send-message-popup">
-        <button class="modal-close-btn">&#128473;</button>
+        <button class="modal-close-btn" aria-label="close popup">
+          <svg viewBox="0 0 20 20" fill="currentColor" height="1em" width="1em">
+            <path
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z">
+            </path>
+          </svg>
+        </button>
         <p class="modal-message__content"></p>
       </div>
+
     </div>
   </div>
 

@@ -4,14 +4,14 @@
     &__title {
         @extend %rubik-500;
         font-size: 24px;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 35px;
     }
 
     &__title-info {
         @extend %rubik-500;
         font-size: 24px;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 30px;
     }
 
@@ -19,7 +19,7 @@
         display: flex;
         justify-content: left;
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 35px;
         line-height: 1.5;
 
@@ -30,7 +30,7 @@
 
     &__info {
         @extend %rubik-400;
-        color: #243f4d;
+        color: $darkBlue;
         margin-bottom: 73px;
         line-height: 1.5;
     }

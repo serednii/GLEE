@@ -19,7 +19,7 @@
                 transition: color 0.3s ease-in-out;
 
                 &:hover {
-                    color: #a3bbc8;
+                    color: $accent;
                 }
             }
 
@@ -54,8 +54,8 @@
             }
 
             &:focus {
-                background-color: #f9fafb;
-                border-color: #f9fafb;
+                background-color: $VeryLightGray;
+                border-color: $VeryLightGray;
                 box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
                 outline: 0;
                 border-radius: 10px;
@@ -92,12 +92,12 @@
             transition: color 0.3s ease-in-out;
 
             &:hover {
-                color: #a3bbc8;
+                color: $accent;
             }
 
             &:focus {
-                background-color: #f9fafb;
-                border-color: #f9fafb;
+                background-color: $VeryLightGray;
+                border-color: $VeryLightGray;
                 box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
                 outline: 0;
                 border-radius: 10px;
@@ -110,7 +110,7 @@
 
         &__form-input {
             outline: 1px solid transparent;
-            background-color: #fef7f0;
+            background-color: $VeryLightPink;
             max-width: 170px;
             width: 100%;
             border: none;
@@ -132,8 +132,8 @@
             transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
             &:hover {
-                background-color: white;
-                color: #a3bbc8;
+                background-color: $darkBlue;
+                color: $accent;
             }
 
             &:focus {
@@ -179,13 +179,13 @@
             transition: color 0.3s ease-in-out;
 
             &:hover {
-                color: #a3bbc8;
+                color: $accent;
 
             }
 
             &:focus {
-                background-color: #f9fafb;
-                border-color: #f9fafb;
+                background-color: $VeryLightGray;
+                border-color: $VeryLightGray;
                 box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
                 outline: 0;
                 border-radius: 10px;

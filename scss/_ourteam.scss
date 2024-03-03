@@ -47,8 +47,12 @@
             transition: fill 0.3s ease-in-out;
         }
 
+        &:focus {
+            @include white-focus;
+        }
+
         &:hover {
-            background-color: #fff;
+            background-color: $darkBlue;
             color: $accent;
 
             .cls-1 {
@@ -56,9 +60,7 @@
             }
         }
 
-        &:focus {
-            @include white-focus;
-        }
+
     }
 
     &__items {
