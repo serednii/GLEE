@@ -1,44 +1,76 @@
-html{
-    box-sizing: border-box;
-  
-  }
-  *,
-  *::after,
-  *::before{
-    box-sizing: inherit;
-  }
-  ul,
-  ol {
-    padding: 0;
-  }
-  ul {
-    list-style: none;
-  }
-  body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
-    margin: 0;
-  }
-  img {
-    max-width: 100%;
-    display: block;
-  }
-  input,button,textarea,select {
-    font: inherit;
-  }
-  a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #262626;
-  }
+html {
+  box-sizing: border-box;
 
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none; // Yeah, yeah everybody write about it
-  }
-  
-  input[type='number'],
-  input[type="number"]:hover,
-  input[type="number"]:focus {
-      appearance: none;
-      -moz-appearance: textfield;
-  }
-  
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #262626;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}

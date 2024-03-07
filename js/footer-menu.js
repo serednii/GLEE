@@ -21,8 +21,6 @@ $(function () {
       $('.footer-top__list, .footer-top__text').attr("style", "display:block");
       $('.footer-top__title').removeAttr('aria-label');
       $('.footer-top__title').off('click');//Видаляємо оброботчик подій
-
-
     }
   }
 

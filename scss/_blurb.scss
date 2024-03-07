@@ -54,10 +54,10 @@
             position: relative;
             margin-left: 0;
             border: 1px solid $LightGrayishBlue;
-            cursor: pointer;
+            // cursor: pointer;
             border-radius: 5px;
             color: $title;
-            background-color: transparent;
+            // background-color: transparent;
             transition: all 0.3s;
 
             &:hover {

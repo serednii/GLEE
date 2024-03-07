@@ -144,10 +144,6 @@ $(function () {
   });
 
 
-  // стилізація input +-
-  $('.select-style, .product-one__num').styler();
-
-
   //Зірки рейтингу
   $(".star").rateYo({
     starWidth: "11px",
