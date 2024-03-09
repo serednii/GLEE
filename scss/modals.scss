@@ -114,12 +114,8 @@
     }
 
     &-btn {
-        // background-color: #c9b3b3;
         width: 32px;
         height: 32px;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
 
         svg {
             path {
@@ -151,10 +147,8 @@
 
 
     &-content {
-        // margin-top: 0;
         max-width: 250px;
 
-        // width: 100%;
 
         max-width: 537px;
         margin: 30px auto 0;
@@ -186,17 +180,20 @@
     &-bottom {
         display: flex;
         justify-content: space-between;
+        row-gap: 15px;
     }
 
     &-shopping {
         padding: 15px 10px;
         height: fit-content;
+        width: fit-content;
         background-color: $accent;
         border: none;
         border-radius: 5%;
         color: #fff;
         @extend %rubik-400;
         text-transform: capitalize;
+
 
         &:focus {
             @include black-focus;
@@ -212,13 +209,12 @@
     }
 
     &-order {
-        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
     }
 
     &-sum {
-        position: absolute;
-        top: 16px;
-        right: 92px;
         height: min-content;
     }
 
@@ -249,9 +245,6 @@
 
 .modal-overlay--visible {
     opacity: 1;
-    // transform: scaleX(100%);
-
-
     visibility: visible;
     transition: all 0.3s ease-in-out;
 }
@@ -269,201 +262,9 @@
 }
 
 
-
-// @keyframes inpopap {
-//     from {
-//         width: 0;
-//     }
-
-//     to {
-//         width: 100%;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .btn-modal {
-//     // border: none;
-//     // cursor: pointer;
-//     // background-color: #000;
-//     // color: #fff;
-//     // padding: 10px;
-// }
-
-// .modal-overlay {
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: rgba(0, 0, 0, 0.7);
-//     // background-color: transparent;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//     width: 100%;
-//     opacity: 0;
-//     z-index: 10000;
-//     padding: 15px;
-//     visibility: hidden;
-//     transition: all 0.3s ease-in-out;
-// }
-
-// .modal {
-//     background-color: #fff;
-//     width: 300px;
-//     // height: 300px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     display: none;
-//     position: relative;
-
-//     .modal__card-top {
-//         display: flex;
-//         justify-content: space-between;
-//         margin-bottom: 30px;
-
-//         .modal-close-btn {
-//             border: none;
-//             outline: none;
-//             background-color: transparent;
-//             font-size: 1.5rem;
-//             cursor: pointer;
-//             position: absolute;
-//             top: 10px;
-//             right: 10px;
-//         }
-//     }
-
-//     .modal__card {
-//         &-list {}
-
-//         &-item {
-//             margin-bottom: 30px;
-
-//         }
-
-//         &-wrap {}
-
-//         &-info {
-//             display: flex;
-//             justify-content: left;
-//             gap: 30px;
-//             margin-bottom: 20px;
-//         }
-
-//         &-content {
-//             margin-top: 0;
-//             max-width: 250px;
-
-//         }
-
-//         &-title {
-//             font-size: 20px;
-//             margin-bottom: 18px;
-//         }
-
-//         &-star {
-//             display: inline-block;
-//             margin: 0 auto;
-
-//         }
-
-//         &-price {
-//             font-size: 23px;
-//             margin: 10px 0 10px;
-//         }
-
-//         &-form {}
-
-//         &-btn {
-//             padding: 10px 28px;
-//             font-size: 14px;
-//         }
-//     }
-// }
-
-// // .modal__card {
-// //     padding: 50px 0px 20px;
-// //     max-width: 500px;
-// //     width: 100%;
-// //     min-height: 120px;
-// //     height: initial;
-// //     background-color: antiquewhite;
-// //     border-radius: 10px;
-// //     font-size: 1rem;
-// //     text-align: center;
-// //     animation-name: inpopap;
-// //     animation-duration: 1.3s;
-// //     overflow: hidden;
-// // }
-// .modal__card,
-// .modal-message {
-//     padding: 16px 10px 20px;
-//     max-width: 500px;
-//     width: 100%;
-//     min-height: 120px;
-//     height: initial;
-//     background-color: antiquewhite;
-//     border-radius: 10px;
-//     font-size: 1rem;
-//     text-align: center;
-//     animation-name: inpopap;
-//     animation-duration: 1.3s;
-//     overflow: hidden;
-
-//     &__content {
-//         min-width: 280px;
-//         margin: 0 auto;
-//     }
-// }
-
-
-
-// .modal-overlay--visible {
-//     opacity: 1;
-//     visibility: visible;
-//     // transition: opacity 0.3s ease-in-out;
-// }
-
-// .modal--visible {
-//     display: block;
-// }
-
-// @keyframes inpopap {
-//     from {
-//         width: 0;
-//     }
-
-//     to {
-//         width: 100%;
-//     }
-// }
+@media(max-width: 360px) {
+    .modal__card-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
