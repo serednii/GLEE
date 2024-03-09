@@ -51,6 +51,7 @@ class EventCardButton {
         dataLocal = dataLocalStorage.getData('dataHeart');
       }
       this.startChangeColorButtons()
+      this.changeCounterHeaderCards()
 
     }
   }
