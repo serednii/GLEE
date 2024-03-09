@@ -1,29 +1,31 @@
 
-
-
-
 class EventPopupCard {
-  // #numberBlockParent;
-  // #callBack;
-  constructor(numberBlockParent, callBack = undefined) {
-    this.numberBlockParent = numberBlockParent;
-    this.callBack = callBack;
 
-    document.body.addEventListener('click', (event) => this.handlerBodyClick(event));
-    document.body.addEventListener('input', (event) => this.handlerBodyInput(event));
+  constructor() {
+    this.blockParent = '.modal__card-cart ';
+    this.cardItem = this.blockParent + '.modal__card-item';
+    this.myNumberInput = '.my-number__input';
+    this.myNumberMinus = '.my-number__minus';
+    this.myNumberPlus = '.my-number__plus';
+
+    eventBody.addHandlerClickFunction(this.handlerBodyClick.bind(this));
+    eventBody.addHandlerInputFunction(this.handlerBodyInput.bind(this));
+    // document.body.addEventListener('click', (event) => this.handlerBodyClick(event));
+    // document.body.addEventListener('input', (event) => this.handlerBodyInput(event));
   }
 
   handlerBodyClick(event) {
+    console.log('handlerBodyClick')
     const eventTarget = event.target;
-    const nodeParent = eventTarget.closest(this.numberBlockParent)
+    const nodeParent = eventTarget.closest(this.cardItem)
     if (nodeParent) {
       event.preventDefault()
-      const input = nodeParent.querySelector('.my-number__input');
-      const buttonMinus = nodeParent.querySelector('.my-number__minus');
-      const buttonPlus = nodeParent.querySelector('.my-number__plus');
+      const input = nodeParent.querySelector(this.myNumberInput);
+      const buttonMinus = nodeParent.querySelector(this.myNumberMinus);
+      const buttonPlus = nodeParent.querySelector(this.myNumberPlus);
 
       if (eventTarget.closest('.remove-product')) {
-        const cardParent = eventTarget.closest('.modal__card-item');
+        const cardParent = eventTarget.closest(this.cardItem);
         const idProduct = cardParent.dataset.id;
         // Видаляємо з локал сторкдж
         dataLocalStorage.deleteObj(idProduct, 'dataCart');
@@ -33,10 +35,10 @@ class EventPopupCard {
         eventCardButton.changeCounterHeaderCards();
         // Знімаємо кольори на кнопках
         eventCardButton.startChangeColorButtons();
-
+        this.startTotalCostCards()
       }
 
-      if (input && buttonMinus && buttonPlus) {
+      if (eventTarget == buttonPlus || eventTarget == buttonMinus) {
         const min = +input.getAttribute("min") || -9999999;
         const max = +input.getAttribute("max") || 9999999;
         const step = +input.getAttribute("step") || 1;
@@ -61,20 +63,19 @@ class EventPopupCard {
           buttonMinus,
           buttonPlus,
         }
-        this.callBack && this.callBack(obj);
+        this.priceUpdate(obj);
       }
-      // console.log(event.target)
     }
   }
 
   handlerBodyInput(event) {
     // event.preventDefault()
     const eventTarget = event.target;
-    const nodeParent = eventTarget.closest(this.numberBlockParent)
+    const nodeParent = eventTarget.closest(this.cardItem)
     if (nodeParent) {
-      const input = nodeParent.querySelector('.my-number__input');
-      const buttonMinus = nodeParent.querySelector('.my-number__minus');
-      const buttonPlus = nodeParent.querySelector('.my-number__plus');
+      const input = nodeParent.querySelector(this.myNumberInput);
+      const buttonMinus = nodeParent.querySelector(this.myNumberMinus);
+      const buttonPlus = nodeParent.querySelector(this.myNumberPlus);
 
       if (input && buttonMinus && buttonPlus) {
         const min = +input.getAttribute("min") || -9999999;
@@ -105,39 +106,41 @@ class EventPopupCard {
           buttonPlus,
         }
 
-        this.callBack && this.callBack(obj);
+        this.priceUpdate(obj);
       }
     }
   }
 
-  //Обчисляємо загальну суму віх карточок
-  totalCostCards(eventTarget, parentList, priceCard, totalPrice) {
-    const modalCardList = eventTarget?.closest(parentList);
-    const modalCards = modalCardList?.querySelectorAll(priceCard);
-    const modalCardSum = modalCardList?.querySelector(totalPrice); //Загальна сума всіх товарів
-    const arrayFromNodeList = Array.from(modalCards);
-    const totalCost = arrayFromNodeList.reduce((a, e) => a + +e.innerText, 0);
-    modalCardSum.innerText = totalCost;
-  }
-
-  startTotalCostCards(parentList, priceCard, totalPrice) {
-    const modalCardList = document.querySelector(parentList);
+  startTotalCostCards() {
+    const priceCard = '.modal__card-price-number'
+    const totalPrice = '.modal__card-sum'
+    const modalCardList = document.querySelector(this.blockParent);
     if (modalCardList) {
-      const modalCards = modalCardList?.querySelectorAll(priceCard);
-      const modalCardSum = modalCardList?.querySelector(totalPrice); //Загальна сума всіх товарів
+      const modalCards = modalCardList?.querySelectorAll(this.blockParent + priceCard);
+      const modalCardSum = modalCardList?.querySelector(this.blockParent + totalPrice); //Загальна сума всіх товарів
       const arrayFromNodeList = Array.from(modalCards);
       const totalCost = arrayFromNodeList.reduce((a, e) => a + +e.innerText, 0);
       modalCardSum && (modalCardSum.innerText = totalCost);
     }
   }
 
+  priceUpdate(obj) {
+    const modalCardWrap = obj.eventTarget.closest(this.cardItem); //Обгортка карточки
+    const numberPrice = modalCardWrap?.querySelector(this.blockParent + '.modal__card-price-number'); //Загальна ціна товару карточки
+    const numberDataPrice = numberPrice?.dataset.price; //Вартість одиниці товару
+    numberPrice.innerText = `${obj.value * +numberDataPrice}`; //обновляємо ціну товару
+    this.startTotalCostCards(); // Обновляємо ціну товарів
+  }
+
   renderPopupCart() {
     const dataCarts = dataLocalStorage.getData('dataCart');
-    const countProduct = document.querySelector('.modal__card-cart-count-product span');
-    if (dataCarts && countProduct) {
-      countProduct.innerText = dataCarts.length
+    const countProduct = '.modal__card-count-product span';
+    const cardList = ".modal__card-list";
+    const countProductElement = document.querySelector(this.blockParent + countProduct);
+    if (dataCarts && countProductElement) {
+      countProductElement.innerText = dataCarts.length
 
-      var cards = document.querySelector(".modal__card-list-cart");
+      const cards = document.querySelector(this.blockParent + cardList);
       cards.innerHTML = ''
 
       if (dataCarts.length > 0) {
@@ -181,57 +184,16 @@ class EventPopupCard {
         <p class="modal__card-empty">
           У вас немає добавлених товарів
         </p>
-      </li>`
+      </li>
+`
         );
       }
-
-
     }
-
-
   }
 
 }
 
-function printObj(obj) {
-
-  // buttonMinus
-  // : 
-  // button.my-number__minus.my-number__button
-  // buttonPlus
-  // : 
-  // button.my-number__plus.my-number__button
-  // eventTarget
-  // : 
-  // input.my-number__input
-  // input
-  // : 
-  // input.my-number__input
-  // max
-  // : 
-  // 20
-  // min
-  // : 
-  // -20
-  // nodeParent
-  // : 
-  // div.my-number
-  // step
-  // :
-  // 1
-  // value
-  // :
-  // "04"
-
-  const modalCardWrap = obj.eventTarget.closest('.modal__card-wrap'); //Обгортка карточки
-  const numberPrice = modalCardWrap?.querySelector('.modal__card-price-number'); //Загальна ціна товару карточки
-  const numberDataPrice = numberPrice?.dataset.price; //Вартість одиниці товару
-  numberPrice.innerText = `${obj.value * +numberDataPrice}`;
-  eventPopupCard.startTotalCostCards('.modal__card-cart', '.modal__card-price-number', '.modal__card-sum');
-}
-
-const eventPopupCard = new EventPopupCard('.modal__card-form', printObj);
-// numberCounter('.my-number', printObj);
+const eventPopupCard = new EventPopupCard();
 
 
 

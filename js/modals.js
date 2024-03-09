@@ -1,8 +1,7 @@
-const btns = document.querySelectorAll('.btn-modal');
+const openButtonsModals = document.querySelectorAll('.btn-modal');
 const modalOverlay = document.querySelector('.modal-overlay ');
 const modals = document.querySelectorAll('.modal');
 const modalCloseBtn = document.querySelectorAll('.modal-close-btn')
-
 
 const showInformationSendMail = (message, path) => {
     const modals = document.querySelectorAll('.modal');
@@ -13,8 +12,6 @@ const showInformationSendMail = (message, path) => {
         el.classList.remove('modal--visible');
     });
 
-    // console.log(modalVisible.querySelector('.modal-message'))
-
     if (modalVisible) {
         modalVisible.querySelector('.modal-message__content').innerText = message
         modalVisible.classList.add('modal--visible');
@@ -22,31 +19,36 @@ const showInformationSendMail = (message, path) => {
     }
 }
 
-
-btns.forEach((el) => {
+openButtonsModals.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
         console.log(path)
         if (path === 'cart-popup') {
             eventPopupCard.renderPopupCart()
-            eventPopupCard.startTotalCostCards('.modal__card-cart', '.modal__card-price-number', '.modal__card-sum');
+            eventPopupCard.startTotalCostCards();
+        } else if (path === 'heart-popup') {
+            eventPopupHeart.renderPopupHeart()
         }
 
         document.body.style.overflowY = 'hidden';
 
-        modals.forEach((el) => {
-            if (el.classList.contains('modal--visible')) {
-                $(el).css.width = '0';
-                el.classList.add('modal--out-visible');
-                $(el).animate({ width: '600px' });
-                // setTimeout(() => {
-                //     el.classList.remove('modal--out-visible');
-                //     el.classList.remove('modal--visible');
-                // }, 500);
-            }
-        });
+        // modals.forEach((el) => {
+        //     if (el.classList.contains('modal--visible')) {
+        //         // $(el).css.width = '0';
+        //         // el.classList.add('modal--out-visible');
+        //         // $(el).animate({ width: '600px' });
+        //         setTimeout(() => {
+        //             el.classList.remove('modal--out-visible');
+        //             el.classList.remove('modal--visible');
+        //         }, 500);
+        //     }
+        // });
 
-        document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+        document.querySelector(`[data-target="${path}"]`)?.classList.add('modal--visible');
+        setTimeout(() => {
+            document.querySelector(`[data-target="${path}"]`)?.classList.add('modal--scaleX');
+        }, 10)
+
         modalOverlay.classList.add('modal-overlay--visible');
     });
 });
@@ -54,16 +56,13 @@ btns.forEach((el) => {
 modalOverlay && modalOverlay.addEventListener('click', (e) => {
     if (e.target == modalOverlay) {
         document.body.style.overflowY = 'auto';
-        // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
-                // CollapsingTheElementByWidth(el, () => {
-                el.classList.remove('modal--visible');
-                modalOverlay.classList.remove('modal-overlay--visible');
-                // })
-                // $(el).animate({ width: '0' });
-                // el.classList.remove('modal--visible');
-                // modalOverlay.classList.remove('modal-overlay--visible');
+                el.classList.remove('modal--scaleX');
+                setTimeout(() => {
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                    el.classList.remove('modal--visible');
+                }, 500);
             }
         });
     }
@@ -72,16 +71,13 @@ modalOverlay && modalOverlay.addEventListener('click', (e) => {
 modalCloseBtn.forEach(e => {
     e.addEventListener('click', (e) => {
         document.body.style.overflowY = 'auto';
-        // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
-                // CollapsingTheElementByWidth(el, () => {
-                el.classList.remove('modal--visible');
-                modalOverlay.classList.remove('modal-overlay--visible');
-                // })
-                // $(el).animate({ width: '0' });
-                // el.classList.remove('modal--visible');
-                // modalOverlay.classList.remove('modal-overlay--visible');
+                el.classList.remove('modal--scaleX');
+                setTimeout(() => {
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                    el.classList.remove('modal--visible');
+                }, 500);
             }
         });
     })

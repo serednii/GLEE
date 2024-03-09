@@ -5,14 +5,8 @@ class DataLocalStorage {
   }
 
   toggleObj(obj, key) {
-
     let data = this.getData(key);
-    // console.log('datatoogle')
-    // console.log(data)
-
     const isObj = data.find((objEl) => objEl.id === obj.id);
-    // console.log(isObj);
-
     if (isObj) {
       this.deleteObj(obj.id, key);
       return 'deleted';
@@ -25,20 +19,12 @@ class DataLocalStorage {
 
   getData(key) {
     const data = localStorage.getItem(key);
-    // console.log('data')
-    // console.log(typeof data)
-    // console.log(data)
-    // console.log(Array.isArray(data))
-
-    // return data ? JSON.parse(data) : [];
     if (data) {
       return JSON.parse(data);
     } else {
       return [];
     }
-
   }
-
 
   deleteObj(id, key) {
     const newClearData = this.getData(key)?.filter((obj) => obj.id !== id);

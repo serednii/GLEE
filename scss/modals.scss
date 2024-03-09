@@ -15,7 +15,7 @@
     z-index: 10000;
     padding: 15px;
     visibility: hidden;
-    transition: all 0.9s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .modal {
@@ -25,8 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: scaleX(0);
     display: none;
     position: relative;
+    transition: all 0.5s ease-in-out;
 
     &-close-btn {
         // border: none;
@@ -38,7 +40,6 @@
         top: 10px;
         right: 10px;
     }
-
 }
 
 .modal__card,
@@ -54,8 +55,8 @@
     border-radius: 10px;
     font-size: 1rem;
     text-align: center;
-    animation-name: inpopap;
-    animation-duration: 1.3s;
+    // animation-name: inpopap;
+    // animation-duration: 1.3s;
     overflow: hidden;
 
     &__content {
@@ -75,12 +76,17 @@
 
 .modal-overlay--visible {
     opacity: 1;
+    // transform: scaleX(100%);
     visibility: visible;
-    transition: opacity 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
 }
 
 .modal--visible {
     display: block;
+}
+
+.modal--scaleX {
+    transform: scaleX(1);
 }
 
 .modal__card {
@@ -241,20 +247,38 @@
 
 }
 
+.modal-overlay--visible {
+    opacity: 1;
+    // transform: scaleX(100%);
 
 
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
 
-
-
-@keyframes inpopap {
-    from {
-        width: 0;
+.modal__card-heart {
+    .modal__card-wrap {
+        position: relative;
     }
 
-    to {
-        width: 100%;
+    .modal__card-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
+
+
+
+// @keyframes inpopap {
+//     from {
+//         width: 0;
+//     }
+
+//     to {
+//         width: 100%;
+//     }
+// }
 
 
 

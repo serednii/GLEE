@@ -31,11 +31,9 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          // alert("You have been added to the mailing list, a confirmation has been sent to the email you specified");
           showInformationSendMail("You have been added to the mailing list, a confirmation has been sent to the email you specified", 'send-message-popup');
           clearForm(e);
         } else {
-          // alert("You are not added to the newsletter, an error occurred, please try again later:  " + result.message);
           showInformationSendMail("You are not added to the newsletter, an error occurred, please try again later:  " + result.message, 'send-message-popup');
 
         }

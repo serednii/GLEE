@@ -2,47 +2,36 @@
 //добавляємо в localstorag і в header показуємо кількість записів в карточках 
 // і позначаємо іншим кольором кнопки на карточці, щоб було видно що ми добавили товар
 //
-///
-
 
 class EventCardButton {
-  // #userNavInnerHeart;
-  // #userNavInnerCart;
-  // #buttonElementsCard;
-  // #buttonElementsFavorites;
 
   constructor() {
-    document.body.addEventListener('click', (event) => this.#handler(event));
-    this.userNavInnerHeart = document.querySelector('.user-nav__inner-heart span');
-    this.userNavInnerCart = document.querySelector('.user-nav__inner-cart span');
-    this.buttonElementsCard = document.querySelectorAll('.button-cart');
-    this.buttonElementsFavorites = document.querySelectorAll('.button-favorites');
+    this.classUserNavInnerHeart = '.user-nav__inner-heart span';
+    this.classUserNavInnerCart = '.user-nav__inner-cart span';
+    this.classButtonCard = '.button-cart';
+    this.classButtonFavorites = '.button-favorites';
+    this.userNavInnerHeart = document.querySelector(this.classUserNavInnerHeart);
+    this.userNavInnerCart = document.querySelector(this.classUserNavInnerCart);
+    this.buttonCard = document.querySelectorAll(this.classButtonCard);
+    this.buttonFavorites = document.querySelectorAll(this.classButtonFavorites);
+
+    eventBody.addHandlerClickFunction(this.#handler.bind(this))//привязуємося до оброботчика click на body
     this.startChangeColorButtons();
     this.changeCounterHeaderCards();
   }
 
   #handler(event) {
     const eventTarget = event.target;
-
     //Click on button cart
-    const btnAddCart = eventTarget?.closest('.button-cart')
+    const btnAddCart = eventTarget?.closest(this.classButtonCard)
     //Click on button favorites
-    const buttonFavorites = eventTarget?.closest('.button-favorites')
+    const buttonHeart = eventTarget?.closest(this.classButtonFavorites)
 
     //If there was a click on the buttons
-    if (btnAddCart || buttonFavorites) {
-
+    if (btnAddCart || buttonHeart) {
       event.preventDefault()
       //we find the envelope of the card
-      const parentCart = btnAddCart?.closest('.categories-item, .shop-content-item') || buttonFavorites?.closest('.categories-item, .shop-content-item')
-
-      // console.log('btnAddCart');
-      // console.log(btnAddCart);
-      // console.log('buttonFavorites');
-      // console.log(buttonFavorites);
-      // console.log('parentCart');
-      // console.log(parentCart);
-
+      const parentCart = btnAddCart?.closest('.categories-item, .shop-content-item') || buttonHeart?.closest('.categories-item, .shop-content-item')
       //let's collect the data into the object from the card
       const cartObj = {
         id: parentCart?.dataset.id,
@@ -57,61 +46,51 @@ class EventCardButton {
         dataLocal = dataLocalStorage.getData('dataCart');
       }
       //add or remove a product from localStorage
-      if (buttonFavorites) {
-        dataLocalStorage.toggleObj(cartObj, 'dataFavorites');
-        dataLocal = dataLocalStorage.getData('dataFavorites');
+      if (buttonHeart) {
+        dataLocalStorage.toggleObj(cartObj, 'dataHeart');
+        dataLocal = dataLocalStorage.getData('dataHeart');
       }
-      this.#changeColorButtons(cartObj.id, btnAddCart || buttonFavorites, dataLocal)
+      this.startChangeColorButtons()
+
     }
   }
 
   //При старті обновляє лічильники в Header на значку корзина і улюблені
   changeCounterHeaderCards() {
-    const dataFavorites = dataLocalStorage.getData('dataFavorites').length;
+    const dataHeart = dataLocalStorage.getData('dataHeart').length;
     const dataCart = dataLocalStorage.getData('dataCart').length;
-    this.userNavInnerHeart.innerText = dataFavorites;
+    this.userNavInnerHeart.innerText = dataHeart;
     this.userNavInnerCart.innerText = dataCart;
   }
 
-  //При старті знаходить всі кнопки і поміяає які є добавлені в корзину або улюблені
+  //При старті знаходить всі кнопки і помічає які є добавлені в корзину або улюблені
   startChangeColorButtons() {
-    const dataFavorites = dataLocalStorage.getData('dataFavorites');
+    const dataHeart = dataLocalStorage.getData('dataHeart');
     const dataCart = dataLocalStorage.getData('dataCart');
-
-    if (dataFavorites && dataFavorites.length > 0) {
-      this.buttonElementsFavorites.forEach(e => {
+    if (dataHeart) {
+      this.buttonFavorites.forEach(e => {
         const idCard = e?.closest('.categories-item, .shop-content-item')?.dataset.id;
-        const isFindCart = dataFavorites.find(e => e.id === idCard);
+        const isFindCart = dataHeart.find(e => e.id === idCard);
         this.#changeColorSvgButtons(e, isFindCart);
       });
     }
 
-    if (dataCart && dataCart.length > 0) {
-      this.buttonElementsCard.forEach(e => {
+    if (dataCart) {
+      this.buttonCard.forEach(e => {
         const idCard = e?.closest('.categories-item, .shop-content-item')?.dataset.id;
         const isFindCart = dataCart.find(e => e.id === idCard);
         this.#changeColorSvgButtons(e, isFindCart);
       });
     }
-
   }
 
   #changeColorSvgButtons(buttonClicked, isFindCart) {
-    // const isFindCart = datalocalStorage.find(e => e.id === idCard);
     if (isFindCart) {
       buttonClicked.classList.add('is-add-card')
     } else {
       buttonClicked.classList.remove('is-add-card')
     }
   }
-
-  #changeColorButtons(idCard, buttonClicked, dataLocal) {
-    this.changeCounterHeaderCards();
-    const isFindCart = dataLocal.find(e => e.id === idCard);
-    this.#changeColorSvgButtons(buttonClicked, isFindCart);
-  }
-
-
 
 }
 
